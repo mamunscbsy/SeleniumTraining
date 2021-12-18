@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="21328" started-at="2021-12-14T18:02:02 CST" finished-at="2021-12-14T18:02:23 CST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="21328" started-at="2021-12-14T18:02:02 CST" finished-at="2021-12-14T18:02:23 CST">
+      <class name="seleniumDemo.TagName">
+        <test-method status="PASS" signature="tagName()[pri:0, instance:seleniumDemo.TagName@d44fc21]" name="tagName" duration-ms="21283" started-at="2021-12-14T18:02:02 CST" finished-at="2021-12-14T18:02:23 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tagName -->
+      </class> <!-- seleniumDemo.TagName -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
