@@ -10,24 +10,26 @@ import org.testng.annotations.Test;
 public class TestngPriority {
 	
 	public ChromeDriver driver;
+	
 
 	@BeforeMethod
-	public void login() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\mamun\\eclipse-workspace\\SeleniumTraining\\drivers\\chromedriver.exe");
+	public void login() throws InterruptedException  {
+		
+		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 		// WebDriverManager.firefoxdriver().setup();
-		driver = new ChromeDriver();
+		 driver = new ChromeDriver();
 		// maximize
 		driver.manage().window().maximize();
 		//implecitly wait
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		// load URL
 		driver.get("http://leaftaps.com/opentaps");
-		// Enter Username - (Element level)
+		// Enter Username 
 		driver.findElementById("username").sendKeys("DemoSalesManager");
 		// driver.findElement(By.id("username")).sendKeys("DemoSalesManager");
-		// Enter Password - (Element level)
+		// Enter Password 
 		driver.findElementById("password").sendKeys("crmsfa");
-		// Click Login Button - (Element level)
+		// Click Login Button 
 		driver.findElementByClassName("decorativeSubmit").click();
 		// click crm/sfa link
 		driver.findElementByLinkText("CRM/SFA").click();
@@ -36,6 +38,7 @@ public class TestngPriority {
 
 	@Test(priority = 1)
 	public void editLead() {
+		
 		// click leads link
 		driver.findElementByLinkText("Leads").click();
 		// click Find leads link
@@ -48,6 +51,7 @@ public class TestngPriority {
 
 	@Test(priority = 0)
 	public void createLead() throws InterruptedException {
+		
 		// click leads
 		driver.findElementByLinkText("Leads").click();
 		// click create lead link
@@ -78,6 +82,7 @@ public class TestngPriority {
 	}
 	@Test(priority = 2)
 	public void deleteLead() {
+		
 		// click Leads
 		driver.findElementByLinkText("Leads").click();
 		// click Find lead link

@@ -26,14 +26,15 @@ public class OpenChromeBrowser {
 			 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			 
 			 //enter username
-			 driver.findElementById("username").sendKeys("DemoSalesManager");
-			 
+			// driver.findElementById("username").sendKeys("DemoSalesManager");
+			 //driver.findElementById("username").sendKeys("DemoSalesManager"); 
+			 driver.findElementByXPath("//input[@id='username']").sendKeys("DemoSalesManager");
 			 //enter password
-			 driver.findElementByName("PASSWORD").sendKeys("crmsfa");
+			// driver.findElementByName("PASSWORD").sendKeys("crmsfa");
 			 
 			 //click login btn
-			 driver.findElementByClassName("decorativeSubmit").click();
-			 
+			// driver.findElementByClassName("decorativeSubmit").click();
+			 driver.findElementByXPath("//input[@class='decorativeSubmit']").click();
 			 //click CRM/SFA
 			 driver.findElementByLinkText("CRM/SFA").click();
 			 		 			 

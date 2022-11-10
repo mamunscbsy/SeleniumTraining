@@ -1,7 +1,5 @@
 package tc_ConnectInheritanceConcept;
 
-
-
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 
@@ -9,7 +7,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 import wrapper.ProjectSpecificWrapper;
-
 
 public class CreateLead extends ProjectSpecificWrapper{
 
@@ -21,7 +18,6 @@ public class CreateLead extends ProjectSpecificWrapper{
 		//click leads
 		driver.findElementByLinkText("Leads").click();
 		
-
 		//click create lead link
 		driver.findElementByLinkText("Create Lead").click();
 
@@ -66,7 +62,6 @@ public class CreateLead extends ProjectSpecificWrapper{
 		}
 	
 	}
-
 
 	}
 

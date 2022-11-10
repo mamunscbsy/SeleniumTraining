@@ -2,6 +2,7 @@ package testNgDemo;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,15 +10,15 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 
+
 public class CreateLead {
 	
 	//public static void main(String[] args) throws InterruptedException {
 
 	@Test
-	public void createLead() throws InterruptedException {	
+	public void createLead() throws InterruptedException {		
 	
-
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\mamun\\eclipse-workspace\\SeleniumTraining\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 		
 		// WebDriverManager.firefoxdriver().setup();
 	
@@ -32,8 +33,22 @@ public class CreateLead {
 		driver.get("http://leaftaps.com/opentaps");
 
 		// Enter Username - (Element level)
-		driver.findElementById("username").sendKeys("DemoSalesManager");
-
+		//driver.findElementById("username1").sendKeys("DemoSalesManager");
+		try {
+			driver.findElement(By.id("username1")).sendKeys("DemoSalesManager");
+			System.out.println("The element Username entered");
+		
+		}
+		catch(Exception e) {	
+			System.err.println("The element Username not entered");
+			//System.err.println("The element Username not entered");
+					
+			//Thread.sleep(2000);
+			
+			//Create RunTime exception
+			//throw new RuntimeException();
+			
+		}
 		// driver.findElement(By.id("username")).sendKeys("DemoSalesManager");
 
 		// Enter Password - (Element level)
@@ -43,8 +58,14 @@ public class CreateLead {
 		driver.findElementByClassName("decorativeSubmit").click();
 
 		// click crm/sfa link
-		driver.findElementByLinkText("CRM/SFA").click();
-
+		//driver.findElementByLinkText("CRM/SFA").click();
+		try {	
+			driver.findElementByLinkText("CRM/SFA").click();
+			System.out.println("Able to click on CRM/SFA link");
+		
+		}catch(Exception e) {
+			System.err.println("Unable to click on CRM/SFA link");
+		}
 		// click leads
 		driver.findElementByLinkText("Leads").click();
 		

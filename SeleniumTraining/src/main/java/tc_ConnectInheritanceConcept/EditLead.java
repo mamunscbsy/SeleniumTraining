@@ -1,6 +1,5 @@
 package tc_ConnectInheritanceConcept;
 
-
 import org.testng.annotations.Test;
 
 import wrapper.ProjectSpecificWrapper;
@@ -11,8 +10,7 @@ public class EditLead extends ProjectSpecificWrapper{
 
 	@Test
 	public void editLead() throws InterruptedException {
-		
-				
+						
 		//click leads link
 		driver.findElementByLinkText("Leads").click();
 		
@@ -70,8 +68,6 @@ public class EditLead extends ProjectSpecificWrapper{
 		  } else {
 		 System.out.println("Not matched");
 		 }
-						
-	
 		
 	}
 

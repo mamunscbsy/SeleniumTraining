@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+
 public class EditLead {
 
 	//public static void main(String[] args) throws InterruptedException {
@@ -12,7 +13,7 @@ public class EditLead {
 	@Test
 	public void editLead() throws InterruptedException {
 		
-		System.setProperty("webdriver.chrome.driver","C:\\SeleniumSoft\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\mamun\\eclipse-workspace\\SeleniumTraining\\drivers\\chromedriver.exe");
 		ChromeDriver driver = new ChromeDriver();
 		
 		//maximize
@@ -63,8 +64,10 @@ public class EditLead {
 		driver.findElementByXPath("(//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/a)[1]").click();
 		
 		Thread.sleep(3000);
+		
 		//Verify title of the page
 		String title = driver.getTitle();
+		
 		System.out.println(title);
 		if(title.contains("View")) {
 			System.out.println("Title matched");

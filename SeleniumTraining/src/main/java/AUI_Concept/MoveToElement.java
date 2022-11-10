@@ -8,6 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 
 
 
+
 public class MoveToElement {
 
 	public static void main(String[] args) throws InterruptedException {
@@ -31,9 +32,8 @@ public class MoveToElement {
 		
 		//perform moveToElement (Mouse Hover On) action, pass the element and use perform() method
 		action.moveToElement(content).perform();
-		
 		//Then click the Articles element
-		driver.findElementByXPath("//a[text()='Articles']").click();
+		driver.findElementByXPath("(//a[text()='Articles'])[1]").click();
 	
 		//wait 3 seconds
 		Thread.sleep(3000);

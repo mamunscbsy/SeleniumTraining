@@ -35,13 +35,12 @@ public class DragAndDrop {
 		Actions action = new Actions(driver);
 		
 		//wait 3 sec		
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		
 		//perform DragAndDrop action, pass the elements and use perform() method
-		//action.dragAndDrop(src, dest).perform();
 		action.dragAndDrop(src, dest).perform();
-
-		
+		//action.dragAndDrop(src, dest).perform();
+		Thread.sleep(4000);
 		//Switch back from frame
 		//driver.switchTo().defaultContent();
 		driver.switchTo().parentFrame();

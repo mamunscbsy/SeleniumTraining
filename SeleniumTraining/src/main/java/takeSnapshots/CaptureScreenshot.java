@@ -32,6 +32,7 @@ public class CaptureScreenshot {
 	}
 	@Test
 	public void captureScreenshot() throws IOException, InterruptedException {
+		
 		File src = driver.getScreenshotAs(OutputType.FILE); // take snapshot and store in Temp File
 
 		//location 1-the path/location where it store after move
@@ -52,6 +53,7 @@ public class CaptureScreenshot {
 		//Again take the screenshot 
 		File src1 = driver.getScreenshotAs(OutputType.FILE);
 		File dest1 = new File("C:\\Users\\mamun\\Desktop\\screenshot\\img.png");
+		//File dest = new File("./snap/image.png");
 		FileUtils.copyFile(src1, dest1);
 		
 	}

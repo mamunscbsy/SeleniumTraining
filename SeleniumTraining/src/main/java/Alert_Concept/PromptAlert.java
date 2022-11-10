@@ -7,16 +7,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+
 public class PromptAlert {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\mamun\\eclipse-workspace\\SeleniumTraining\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		
+		//Create object of ChromeDriver Class		
 		WebDriver driver = new ChromeDriver();
 		
-		//driver.get("https://www.w3schools.com/js/tryit.asp?filename=tryjs_prompt");
-		
+			
 		driver.get("https://the-internet.herokuapp.com/javascript_alerts");
 		
 		//System.out.println(driver.getTitle());
@@ -25,38 +26,36 @@ public class PromptAlert {
 		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
-		/*driver.get("https://the-internet.herokuapp.com/javascript_alerts");
-		System.out.println(driver.getTitle());*/
-		
-		driver.findElement(By.xpath("//button[text()='Click for JS Prompt']")).click();
-		
-		/*driver.switchTo().frame("iframeResult");
-		
-		driver.findElement(By.xpath("//button[text()='Try it']")).click();*/
-		
+		// Click on 'Click for JS Prompt'
+		//driver.findElement(By.xpath("//button[text()='Click for JS Prompt']")).click();
+				
 		//By using Alert class
-		
-		Alert PromptAlert = driver.switchTo().alert();
+	Alert PromptAlert = driver.switchTo().alert();
 		PromptAlert.getText();
 		System.out.println(PromptAlert.getText());
-		
-		
+				
 		Thread.sleep(3000);
 		PromptAlert.sendKeys("I am a Robot");
 		
-		//PromptAlert.sendKeys("I am a Robot");
 		
+		//Explicitly wait
 		Thread.sleep(3000);
-		PromptAlert.accept();
+		//accept alert
+		PromptAlert.accept(); 
+				
+		/*driver.findElement(By.id("result")).getText();
+		System.out.println(driver.findElement(By.id("result")).getText());*/
 		
+		//Or
+		String text = driver.findElement(By.id("result")).getText();
+		System.out.println(text);
+		driver.getCurrentUrl();
+		//Get current Url
+		System.out.println(driver.getCurrentUrl());
+		driver.getTitle();
+		System.out.println(driver.getTitle());
 		
-		
-		driver.findElement(By.id("result")).getText();
-		System.out.println(driver.findElement(By.id("result")).getText());
-		
-		//driver.findElement(By.id("result")).getText();
-		//System.out.println(driver.findElement(By.id("result")).getText()); 
-		
+		driver.close();	
 				
 		/*driver.switchTo().frame("iframeResult");
 		

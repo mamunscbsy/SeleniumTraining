@@ -12,14 +12,15 @@ public class WhileLoop {
 		incerment;
 		}*/
 		
-		//It will print 1 to 10, using While loop
-		int i=1;
-		while(i<=12) {
+		//If I will print 1 to 10, using While loop
+		
+		int i=1; // start
+		while(i<=10) {
 			System.out.println(i);
-			i++;
+			i++; //increment
 		}
 		
-		//System.out.println("...........................");
+		System.out.println("...........................");
 		
 		//Print all the values from below Arrays (obj) by using while loop
 		String[] obj = new String[4];

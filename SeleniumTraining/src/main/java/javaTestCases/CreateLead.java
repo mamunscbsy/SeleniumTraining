@@ -28,16 +28,18 @@ public class CreateLead {
 		driver.get("http://leaftaps.com/opentaps");
 
 		// Enter Username - (Element level)
-		driver.findElementById("username").sendKeys("DemoSalesManager");
-		
+		//driver.findElementById("username").sendKeys("DemoSalesManager");
+		driver.findElementByXPath("//input[@id='username']").sendKeys("DemoSalesManager");
 		//String cssValue = driver.findElementById("username").getCssValue("id");
 		//System.out.println(cssValue);
 		
 		// Enter Password - (Element level)
-		driver.findElementById("password").sendKeys("crmsfa");
+		//driver.findElementById("password").sendKeys("crmsfa");
+		driver.findElementByXPath("//input[@id='password']").sendKeys("crmsfa");
 
 		// Click Login Button - (Element level)
-		driver.findElementByClassName("decorativeSubmit").click();
+		//driver.findElementByClassName("decorativeSubmit").click();
+		driver.findElementByXPath("//input[@value='Login']").click();
 
 		// click crm/sfa link
 		driver.findElementByLinkText("CRM/SFA").click();
@@ -76,14 +78,14 @@ public class CreateLead {
 		Select dd2 = new Select(ele);
 		dd2.selectByVisibleText("Sole Proprietorship");
 		
-		// Click Create lead
+		// Click Create lead button
 		driver.findElementByXPath("//input[@name='submitButton']").click();
 
 		//Verify title of the page
 		String title = driver.getTitle();
 		System.out.println(title);
 		
-				
+		//using-contains()
 		if(title.contains("View")) {
 			System.out.println("Title matched");
 		} else {
@@ -92,6 +94,7 @@ public class CreateLead {
 				
 		//close browser
 		driver.close();
+		
 	}
 	}
 

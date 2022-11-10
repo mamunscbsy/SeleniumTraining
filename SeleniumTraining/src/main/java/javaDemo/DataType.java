@@ -13,8 +13,8 @@ public class DataType {
 						//bit, byte, integer, float, double, short, boolean, char
 				
 				// y=20;
-						
-				int x=100; 
+				int z;	
+				int x = 100; 
 				
 				short num0 = 1;
 				int rumman = 10;
@@ -27,19 +27,20 @@ public class DataType {
 			
 				//NonPrimitive Datatype (String, Arrays, Classes and Interfaces)
 				
-				String name1 = "yousuf";
+				String name1 = "Atiq";
 				
-				String name = "This is Rayhan";
+				String line = "This is Meem";
 				
 				//any thing print/display in console in Java
-					
-				/*System.out.println(num0);
+				
+				System.out.println(num0);
 				System.out.println(rumman);
 				System.out.println(Rumman);
 				System.out.println(letter);
 				System.out.println(number);
 				System.out.println(num3);
 				System.out.println(objnum);
-				System.out.println(name);*/
+				System.out.println(line);
 			}
-			}
+			
+}

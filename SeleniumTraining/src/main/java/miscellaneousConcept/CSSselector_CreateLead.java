@@ -23,8 +23,8 @@ public class CSSselector_CreateLead {
 			driver.get("http://leaftaps.com/opentaps");
 
 			// Enter Username - (Element level)
+		driver.findElementByCssSelector("#username").sendKeys("DemoSalesManager");
 			//driver.findElementById("username").sendKeys("DemoSalesManager");
-			driver.findElementById("username").sendKeys("DemoSalesManager");
 
 			// driver.findElement(By.id("username")).sendKeys("DemoSalesManager");
 
@@ -32,8 +32,8 @@ public class CSSselector_CreateLead {
 			driver.findElementById("password").sendKeys("crmsfa");
 
 			// Click Login Button - (Element level)
-			driver.findElementByClassName("decorativeSubmit").click();
-
+			//driver.findElementByClassName("decorativeSubmit").click();
+			driver.findElementByCssSelector(".decorativeSubmit").click();
 			// click crm/sfa link
 			driver.findElementByLinkText("CRM/SFA").click();
 
@@ -47,10 +47,10 @@ public class CSSselector_CreateLead {
 			driver.findElementByPartialLinkText("Create").click();
 
 			// company name
-			driver.findElementById("createLeadForm_companyName").sendKeys("TCS");
+			//driver.findElementById("createLeadForm_companyName").sendKeys("TCS");
+			driver.findElementByCssSelector("#createLeadForm_companyName").sendKeys("TCS");
 			
-			// enter firstName
-			
+			// enter firstName			
 			try {
 				driver.findElementByCssSelector("input#createLeadForm_firstName").sendKeys("Hema");
 			} catch (NoSuchElementException e) {

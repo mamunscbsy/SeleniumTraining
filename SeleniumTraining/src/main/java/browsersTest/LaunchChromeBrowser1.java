@@ -5,10 +5,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LaunchChromeBrowser1 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 		//Launch/open Chrome Browser
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\mamun\\eclipse-workspace\\SeleniumTraining\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers\\chromedriver.exe");
 		//ChromeDriver driver = new ChromeDriver();
 		
 		//Syntax of create of object of ChromeDriver class
@@ -27,14 +27,8 @@ public class LaunchChromeBrowser1 {
 		
 		//Maximize window
 		driver.manage().window().maximize();
-		
+		Thread.sleep(4000);
 		//Close browser
-		driver.close();
-				
-	
-	
-		
-
+		driver.close();		
 	}
-
 }

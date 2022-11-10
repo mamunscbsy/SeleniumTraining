@@ -6,16 +6,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-
 public class ProjectSpecificWrapper {
 	
-	//public ChromeDriver driver;
-	
 	public ChromeDriver driver;
-		
+	
+
 	@BeforeMethod
-	public void login() throws InterruptedException { 
-		
+	public void login() throws InterruptedException{ 		
 		
 		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe"); 
 		driver = new ChromeDriver();
@@ -41,8 +38,7 @@ public class ProjectSpecificWrapper {
 		Thread.sleep(2000);
 		driver.findElementByLinkText("CRM/SFA").click();
 		
-		}
-	
+		}	
 	@AfterMethod
 	public void closeBrowser() { 
 		driver.close();

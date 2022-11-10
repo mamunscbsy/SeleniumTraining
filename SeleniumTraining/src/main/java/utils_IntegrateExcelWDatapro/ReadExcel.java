@@ -17,7 +17,7 @@ public class ReadExcel {
 		XSSFWorkbook wb = new XSSFWorkbook("./data/ReadData.xlsx");
 
 				//Get Sheet
-				//XSSFSheet sheet = wb.getSheet("MM");
+				//XSSFSheet sheet = wb.getSheet("Sheet1");
 				XSSFSheet sheet = wb.getSheetAt(0);
 
 				//Get row count

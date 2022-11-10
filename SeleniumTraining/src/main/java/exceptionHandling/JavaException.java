@@ -11,7 +11,8 @@ public class JavaException {
 		try {
 		k=i/j; //output will be infinite, but in programming language we don't use infinite, we called exception 
 		}
-		catch(Exception e ) {
+		//catch(ArithmeticException e) { //we can specify the exception
+		catch(Exception e) {
 		System.out.println(e);
 	}
 		System.out.println(k);

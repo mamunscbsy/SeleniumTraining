@@ -8,10 +8,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HandleExceptions {
 
-	public static void main(String[] args)    {
+	public static void main(String[] args) throws InterruptedException    {
 		
-		System.setProperty("webdriver.chrome.driver",
-				"./drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 
 		// className obj = new className();
 		ChromeDriver driver = new ChromeDriver(); // For Chrome
@@ -23,19 +22,23 @@ public class HandleExceptions {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 						
 		try {
-			driver.findElement(By.id("username")).sendKeys("DemoSalesManager");
+			driver.findElement(By.id("username1")).sendKeys("DemoSalesManager");
 			System.out.println("The element Username entered");
 		
-		}catch(Exception e) {
+		}
+		catch(Exception e) {	
 			System.err.println("The element Username not entered");
+			//System.err.println("The element Username not entered");
 					
 			//Thread.sleep(2000);
 			
 			//Create RunTime exception
-			throw new RuntimeException();
+			//throw new RuntimeException();
+			
 		}
 
 		finally { 
+			
 			System.out.println("The element found");
 				}
 	
@@ -43,14 +46,23 @@ public class HandleExceptions {
 		
 		// Enter Password
 		driver.findElementById("password").sendKeys("crmsfa");
-
+		
+		Thread.sleep(2000);
+		
 		// Click Login Button 
 		try {
-			driver.findElementByClassName("decorativeSubmit1").click();
+			driver.findElementByClassName("decorativeSubmit").click();
 			System.out.println("Click on login btn successfully");
 		} catch (Exception e) {
 			System.err.println("Not click on login btn");
 		}
+	try {	
+		driver.findElementByLinkText("CRM/SFA").click();
+		System.out.println("Able to click on CRM/SFA link");
+	
+	}catch(Exception e) {
+		System.err.println("Unable to click on CRM/SFA link");
+	}	
 		driver.close();
 	}
 		// click crm.sfa link

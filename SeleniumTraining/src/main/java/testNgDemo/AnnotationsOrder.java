@@ -16,7 +16,15 @@ public class AnnotationsOrder {
 	public void beforeTest() {
 		System.out.println("beforeTest");
 	}
-	
+	@BeforeClass
+	public void beforeTest1() {
+		System.out.println("beforeTest1");
+	}
+	/*@BeforeClass
+	public void beforeTest() {
+		System.out.println("beforeTest");
+	}*/
+		
 	@BeforeSuite
 	public void beforSuit() {
 		System.out.println("BeforeSuit");
@@ -32,7 +40,7 @@ public class AnnotationsOrder {
 		System.out.println("beforeMethod");
 	}
 	
-	@Test
+	@Test (priority = 1)
 	public void test1() {
 		System.out.println("Execute test1");
 	}
@@ -43,7 +51,7 @@ public class AnnotationsOrder {
 		
 	}
 	
-	@Test
+	@Test (priority = 0)
 	public void test3() {
 		System.out.println("Execute test3");
 	}

@@ -25,22 +25,23 @@ public class CreateLead {
 			driver.get("http://leaftaps.com/opentaps");
 
 			// Enter Username - (Element level)
+			driver.findElementById("username").sendKeys("DemoSalesManager");
 			//driver.findElementById("username").sendKeys("DemoSalesManager");
-			//driver.findElementById("username").sendKeys("DemoSalesManager");
-			driver.findElementByXPath("//input[@id='username']").sendKeys("DemoSalesManager");
+			//driver.findElementByXPath("//input[@id='username']").sendKeys("DemoSalesManager");
 
 			// driver.findElement(By.id("username")).sendKeys("DemoSalesManager");
 
 			// Enter Password - (Element level)
-			//driver.findElementById("password").sendKeys("crmsfa");
-			driver.findElementByXPath("//input[@id='password']").sendKeys("crmsfa");
+			driver.findElementById("password").sendKeys("crmsfa");
+			//driver.findElementByXPath("//input[@id='password']").sendKeys("crmsfa");
 
 			// Click Login Button - (Element level)
-			//driver.findElementByClassName("decorativeSubmit").click();
+			driver.findElementByClassName("decorativeSubmit").click();
 
 			// click crm/sfa link
 			driver.findElementByLinkText("CRM/SFA").click();
-			driver.findElementByXPath("//input[@class='decorativeSubmit']").click();
+			
+			//driver.findElementByXPath("//input[@class='decorativeSubmit']").click();
 
 			// click leads link
 			driver.findElementByLinkText("Leads").click();
@@ -52,21 +53,21 @@ public class CreateLead {
 			driver.findElementByPartialLinkText("Create").click();
 
 			// company name
-			driver.findElementById("createLeadForm_companyName").sendKeys("TCS");
+			driver.findElementById("createLeadForm_companyName").sendKeys("ABC");
 			
 			// enter firstName
-			
-			try {
+			driver.findElementById("createLeadForm_firstName").sendKeys("Hema");
+		/*	try {
 				driver.findElementByCssSelector("input#createLeadForm_firstName").sendKeys("Hema");
 			} catch (NoSuchElementException e) {
 				System.out.println("The element not found");
-			}
+			}*/
 			Thread.sleep(2000);
 			// throw new RuntimeException();
 
 			// enter lastName
-			driver.findElementByCssSelector("#createLeadForm_lastName").sendKeys("M");
-			// driver.findElementById("createLeadForm_lastName").sendKeys("J");
+			//driver.findElementByCssSelector("#createLeadForm_lastName").sendKeys("M");
+			 driver.findElementById("createLeadForm_lastName").sendKeys("J");
 
 			// enter firstName local
 			driver.findElementByCssSelector("input#createLeadForm_firstNameLocal").sendKeys("H");
@@ -80,8 +81,16 @@ public class CreateLead {
 
 			// Choose source
 			WebElement src = driver.findElementById("createLeadForm_dataSourceId");
+			Select dd = new Select(src); //create object of select class
+			//dd.selectByVisibleText("Conference");
+			//dd.selectByValue("LEAD_CONFERENCE");
+			dd.selectByIndex(2);
+			
+			
+			
+			/*WebElement src = driver.findElementById("createLeadForm_dataSourceId");
 			Select dd = new Select(src);
-			dd.selectByVisibleText("Website");
+			dd.selectByVisibleText("Website");*/
 
 			// enter Title
 			driver.findElementByXPath("//input[@name='generalProfTitle']").sendKeys("MS.");
@@ -96,9 +105,15 @@ public class CreateLead {
 			dd1.selectByVisibleText("Insurance");
 
 			// choose ownership
-			WebElement ele = driver.findElementByName("ownershipEnumId");
+			WebElement ownerS = driver.findElementByName("ownershipEnumId");
+			Select dd2 = new Select(ownerS);
+			dd2.selectByVisibleText("Corporation");
+			dd2.selectByValue("OWN_CCORP");
+			dd2.selectByIndex(5);
+			
+			/*WebElement ele = driver.findElementByName("ownershipEnumId");
 			Select dd2 = new Select(ele);
-			dd2.selectByVisibleText("Sole Proprietorship");
+			dd2.selectByVisibleText("Sole Proprietorship");*/
 
 			// enter Sic code
 			driver.findElementByXPath("//input[@name='sicCode']").sendKeys("1010");
@@ -185,22 +200,37 @@ public class CreateLead {
 			// Click Create lead
 			driver.findElementByXPath("//input[@name='submitButton']").click();
 
-			// Verify the firstName(for verifying first name, we use getText() and stored
-			// the value in firstName and print)
-
-		//	String firstName = driver.findElementById("viewLead_firstName_sp").getText();
+			//Verify title of the page
+			String title = driver.getTitle();
+			System.out.println(title);
 			
+			//using-contains()
+			/*if(title.contains("View")) {
+				System.out.println("Title matched");
+			} else {
+				System.out.println("Title not Matched");
+			}*/
+			
+			// Verify the firstName(for verifying first name, we use getText() and stored
+			// the value in firstName variable and print)
+					
 			String firstName = driver.findElementById("viewLead_firstName_sp").getText();
 			System.out.println(firstName);
 
 			//System.out.println("Element not found");
-
+			// Verify the firstName
+			/*if(firstName.equals("Hema")) {
+				System.out.println("FirstName is matched");
+			}
+			else {
+				System.out.println("FirstName is not matched");
+			}
 			
-			if(firstName.contains("Hema")) {
+			/*if(firstName.contains("Hema")) {
 				System.out.println("FirstName is matched");
 			}else {
 				System.out.println("FirstName is not matched");
-			}
+			}*/
 			driver.close();
 		}
 	}

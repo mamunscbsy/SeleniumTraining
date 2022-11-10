@@ -26,7 +26,8 @@ public class TAB_ENTER {
 		//By using Actions class- enter password as mahbub using Tab key on facebook.com
 		
 		Thread.sleep(3000);
-		//Hit Tab key-Tab action will perform
+		//Hit Tab key from Keyboard-Tab action will perform
+		//action.sendKeys(Keys.TAB)
 		action.sendKeys(Keys.TAB)
 		.sendKeys("mahbub") //Enter the password in password field
 		.build().perform(); //perform action

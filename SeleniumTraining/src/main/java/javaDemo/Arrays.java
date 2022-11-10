@@ -28,34 +28,40 @@ public class Arrays {
 
 				//NonPrimitive Datatype (String, Arrays, Classes and Interfaces)
 				
-			String txt = "yousuf";
-
+			String txt = "Atiq"; // data type
 
 
 				// syntax for Arrays:
-				// names = "yousuf", "shihab", "Mamun";				
-
-				//1. How to store the values into Arrays(Note: Two ways available)
-
-				// way-1
-			/*int [] id = {10,20,30,40,50,60}; //array.length
+				// String [] names = {"yousuf", "shihab", "Mamun"};	
+		//	String [] names = {"Atiq","Meem","Naz"};
+			String [] list = {"book","book2","book3"};
 			
-			//Get count of arrays 
+			//1. How to store the values into Arrays(Note: Two ways available)
+						
+				// way-1- examples
+			//int [] prices = {10,12,13,15,20,25};
+			//String [] emp = {"Harun","Reza", "Daizy", "Touhid","Shipan","Sumaiya"};
+			
+			//Examples-1 (integer type)
+			int [] id = {10,20,30,40,50,60}; //array.length
+			
+			//Get count of arrays -array.length
 			System.out.println(id.length);
-			
+			System.out.println("................................");
 			//Get particular value from arrays			
-			System.out.println(id[2]);
-			
+			System.out.println(id[3]);
 			System.out.println(id[1]);
 			System.out.println(id[5]);
 			
-			//System.out.println("...................................");
+			System.out.println("...................................");
 			
-				String[] names = {"milton", "shakil", "abcd", "lipee"}; 
+			//Example-2 (String type)
+			String[] names = {"milton", "shakil", "abcd", "lipee"}; 
 				
 			System.out.println(names.length);
 			System.out.println(names[2]);
 			
+			//others examples
 				//int[] ph = {123, 456, 789, 1 ,2 ,3 ,4};		
 				//char[] ch1 = {'a', 'b', 'c', 'd'};
 				
@@ -66,39 +72,46 @@ public class Arrays {
 					//System.out.println(names.length);
 					//System.out.println(ph.length);*/
 
-				//way-2		
+				//way-2	(using object)	
 				//ClassName obj = new ClassName();
 				
-				//String[] names = new String[4];
+			//String[] names = new String[4];
+			String [] emp = new String [5];
+			//String [] emp1 = new String [6];
+			emp[0]= "Reza";
+			emp[1]= "Daisy";
+			emp[2]= "Tushar";
+			emp[3]= "Shakil";
+			emp[4]= "Sumit";
+			emp[5]= "Atik";
 			
-				String [] obj = new String[5];
+			/*String [] obj = new String[5];
 				obj[0]=	"rumel";
 				obj[1] = "rumi";
 				obj[2] = "neepa";
 				obj[3] = "xyz";
-				obj[4] = "abc";
-				//obj[5] = "rozy";
+				obj[4] = "abc";*/
+				//obj[5] = "mamun";
+				
+				//obj[5] = "Reza";
 				//System.out.println(5);
 
-				//System.out.println(",,,,,,,,,,,,,,,,,,,,,,,,,");
+				System.out.println(",,,,,,,,,,,,,,,,,,,,,,,,,");
 
-				//2. How to pick value from Array ---> array[indexNumber]		
-				System.out.println(obj[4]);
+				//2. How to pick particular value from Array ---> array[indexNumber]		
+				System.out.println(emp[4]);
 
 
 				//3. how to get count of Array ---> array.lenght
-				System.out.println(obj.length);
-				
-
-
-				
-				//System.out.println("**********************************************************");
+				System.out.println(emp.length);
+								
+				System.out.println("**********************************************************");
 
 					//for(i=0; i<=20; i++)
 				//4. using for iterator, while loops and forEach		
 
-			/*	for (int i= 0; i <obj.length; i=i+1) {			
-					System.out.println(obj[i]);
+				/*for (int i= 0; i <emp.length; i=i+1) {			
+					System.out.println(emp[i]);
 				}
 
 				//String[] obj = new String[4];
@@ -121,12 +134,12 @@ public class Arrays {
 					System.out.println(obj[i]);
 				}	*/	
 
-				System.out.println("-------------------------------------------------------------");
+				//System.out.println("-------------------------------------------------------------");
 
 				//3.While loop		
 				/*int i =0;
 				while (i<=3) {				
-					System.out.println(obj[i]);
+					System.out.println(emp[i]);
 					i++;
 			}*/
 

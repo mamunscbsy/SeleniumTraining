@@ -8,7 +8,7 @@ public class Test {
 		
 		//MobileUser mu = new MobileUser();
 				
-		//Syntax: ClassName(SuperClass) referenceVariable ;
+		//Syntax of referenceVariable: ClassName(SuperClass) referenceVariable ;
 		MobileUser mu; //reference variable of super class
 		
 		mu= new Karim();

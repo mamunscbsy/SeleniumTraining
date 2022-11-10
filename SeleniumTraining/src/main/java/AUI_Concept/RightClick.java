@@ -24,6 +24,7 @@ public class RightClick {
 		
 		Actions action = new Actions(driver);
 		
+		//perform RightClick -contextClick 
 		action.contextClick(rightclick).perform();
 						
 		Thread.sleep(3000);

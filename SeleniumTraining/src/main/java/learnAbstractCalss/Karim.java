@@ -2,7 +2,7 @@ package learnAbstractCalss;
 
 public class Karim extends MobileUser {
 	
-	//both Call(), sendMessage(), methods internally comes here for inheritance concept]
+	// Call(), sendMessage(),both methods internally comes here for inheritance concept]
 	
 	@Override
 	void sendMessage() {

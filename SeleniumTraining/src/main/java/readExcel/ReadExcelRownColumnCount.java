@@ -11,36 +11,29 @@ public class ReadExcelRownColumnCount {
 
 	public static void main(String[] args) throws IOException {
 
-		// Open/Enter into the workbook
-		XSSFWorkbook wb = new XSSFWorkbook("./data/ReadData.xlsx");
+		// Open/Enter the workbook
+				XSSFWorkbook wb = new XSSFWorkbook("./data1/ExcelSheet.xlsx");
 
-		// Get Sheet
-		XSSFSheet sheet = wb.getSheet("CreatLeadData");
+				//Get Sheet
+				XSSFSheet sheet = wb.getSheet("Sheet1");
 
-		// row count		
-		int rowCount = sheet.getLastRowNum();
-		System.out.println(rowCount);
-		
-		//column count
-		int columnCount = sheet.getRow(1).getLastCellNum();
-		
-		System.out.println(columnCount);
+				//Get row count
+				int rowCount = sheet.getLastRowNum();
+				System.out.println(rowCount);
 
-		// open 'for loop' for rows
-		for (int i = 1; i <= rowCount; i++) {
-			// Get row
-			XSSFRow row = sheet.getRow(i);
+				//Get column count
+				int columnCount = sheet.getRow(0).getLastCellNum();
+				System.out.println(columnCount);
 
-			// open 'for loop' for columns
-			for (int j = 0; j <columnCount; j++) {
-
-				// Get column
-				XSSFCell cell = row.getCell(j);
-				
-				// Actions -> Read value
-				String value = cell.getStringCellValue();
-				System.out.println(value);
-			
+				for (int i = 1; i <= rowCount; i++) {
+					//Get row
+					XSSFRow row = sheet.getRow(i);
+					for (int j = 0; j < columnCount; j++) {
+						// Get column
+						XSSFCell cell = row.getCell(j); //Column 2
+						// Actions -> Read value
+						String sValue = cell.getStringCellValue();
+						System.out.println(sValue);
 			}//ends columns for loop
 		}//ends rows for loop
 

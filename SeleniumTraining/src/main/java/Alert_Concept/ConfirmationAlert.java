@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class ConfirmationAlert {
 
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\mamun\\eclipse-workspace\\SeleniumTraining\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		
 		ChromeDriver driver = new ChromeDriver(); 
 
@@ -23,8 +23,7 @@ public class ConfirmationAlert {
 		//driver.findElementByLinkText("AGENT LOGIN").click();
 		
 		driver.findElementByXPath("//input[@id='username']").sendKeys("DemoSalesManager");
-		//driver.findElementByXPath("//input[@id='username']").sendKeys("DemoSalesManager");
-
+		
 		//driver.findElementByXPath("//button[text()='Try it']").click();
 
 		driver.findElementById("password").sendKeys("crmsfa");
@@ -46,8 +45,8 @@ public class ConfirmationAlert {
 		System.out.println(ConfirmationAlert);
 		
 		Thread.sleep(3000);
-		//driver.switchTo().alert().accept();
-		driver.switchTo().alert().dismiss();
+		driver.switchTo().alert().accept();
+		//driver.switchTo().alert().dismiss();
 			
 
 		driver.close();

@@ -10,8 +10,7 @@ public class DeleteLead extends ProjectSpecificWrapper{
 
 	@Test
 	public void deleteLead() {
-
-			
+		
 		//click Leads
 		driver.findElementByLinkText("Leads").click();
 		
@@ -28,11 +27,8 @@ public class DeleteLead extends ProjectSpecificWrapper{
 		driver.findElementByXPath("//input[@name='phoneAreaCode']").sendKeys("682");
 		
 		//enter phone number
-		driver.findElementByXPath("//input[@name='phoneNumber']").sendKeys("2084048");
-		
-				
+		driver.findElementByXPath("//input[@name='phoneNumber']").sendKeys("2084048");		
 	}
-
 	}
 
 

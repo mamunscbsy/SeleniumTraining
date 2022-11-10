@@ -1,23 +1,48 @@
 package learnCollections;
 
-
-
 import java.util.ArrayList;
-import java.util.LinkedList;
+
 import java.util.List;
 
 public class LearnList {
 
 	public static void main(String[] args) {
-		// Step 1:- Create object for ArrayList class
-		
+		//1. ArrayList, Step 1:- Create object for ArrayList class
+		//Step 2: Use all List methods one by one
 		//Syntax-List<Integer> lst = new ArrayList<Integer>();
-		
-		//List<Integer> id = new LinkedList<Integer>();
 		//List<Integer> id = new ArrayList<Integer>();
+		List<Integer> id = new ArrayList<Integer>();
+		id.add(10);
+		id.add(20);
+		id.add(30);
+		id.add(40);
+		id.add(50);
+		id.add(60);
+		id.add(10);
+		id.add(50);
 		
-		List<Integer> id = new LinkedList<Integer>();
+		System.out.println(id);
 		
+		System.out.println(id.size());
+		id.add(70);
+		//After adding new item in the list
+		System.out.println(id);
+		System.out.println(id.size());
+		
+		id.remove(4);
+		System.out.println(id);
+		
+		System.out.println(id.contains(20));
+		
+		for(Integer eachId : id) {
+			System.out.println(eachId);
+		}
+		
+		id.clear();
+		id.isEmpty();
+		
+	/*	List<Integer> id = new ArrayList<Integer>();
+		id.add(20);
 		id.add(15);
 		id.add(10);
 		id.add(20);
@@ -36,11 +61,12 @@ public class LearnList {
 		
 		for (Integer eachId : id) {
 			System.out.println(eachId);
-		}
+		}*/
 		
 		//List<String> lst = new ArrayList<String>();
 		
-	/*	List<String> lst = new ArrayList<String>();
+		//List<String> lst = new ArrayList<String>();
+		List<String> lst = new ArrayList<String>();
 				
 				lst.add("Neepa");
 				lst.add("Mahbub");
@@ -51,29 +77,31 @@ public class LearnList {
 				lst.add("Mamun");
 				lst.add("emad");
 				lst.add("Neepa");
-
+//Note: ArrayList allow duplicate value, for that we have inserted Neepa and Mahbub multiple times.
 				System.out.println(lst);
 				
 				//Get the count of list		
-				//System.out.println(lst.size());	
-				System.out.println(lst.size());
-				
+				System.out.println(lst.size());	
+							
 				System.out.println("...............................................");
 				
 				//Add new Item in the List
-				lst.add("shihab");
+				lst.add("Bepul");
 				
-				//Get the count of list	
+				//After adding item
+				System.out.println(lst);
+				
+				//After adding-Get the count of list	
 				System.out.println(lst.size());
 				
-				System.out.println("...............................................");
+			System.out.println("...............................................");
 
 				//print all items inside the list		
 				for (int i = 0; i < lst.size(); i++) {
 					System.out.println(lst.get(i));
 				}
 
-				System.out.println("...............................................");
+			System.out.println("...............................................");
 	
 				// delete particular item from list
 				lst.remove(3);
@@ -90,9 +118,9 @@ public class LearnList {
 				System.out.println("...............................................");
 				
 				//Verifing Particular Item in the List-true/false
-				System.out.println(lst.contains("Neepa1"));	
+				System.out.println(lst.contains("Neepa"));	
 				
-				System.out.println("...............................................");
+			System.out.println("...............................................");
 				
 				//Clear the List
 				lst.clear();
@@ -100,7 +128,7 @@ public class LearnList {
 				System.out.println("...............................................");
 				
 				//Confirms/Verify the List is Empty-true/false
-				System.out.println(lst.isEmpty()); */
+				System.out.println(lst.isEmpty()); 
 	  
 		  
 		/*  List<String> lst1 = new ArrayList<String>(); 
@@ -165,6 +193,51 @@ public class LearnList {
 		for (Integer eachLst : lst1) {
 			System.out.println(eachLst);
 		}*/
+				//List- LinkedList class
+			/*	List<String> names = new LinkedList<String>();
+				names.add("Wadud");
+				names.add("Sumayia");
+				names.add("Touhid");
+				names.add("Daisy");
+				names.add("Tushar");
+				System.out.println(names);
+				
+				//Get the count of the list System.out.println(lst.size());
+				  System.out.println("...............................................");
+				  
+				  names.add("Jony"); 
+				  System.out.println(names.size());
+				  System.out.println("...............................................");
+				  
+				  //Print all items inside the list 
+				  for(String eachNames : names) { 
+					  System.out.println(eachNames);
+				  
+				  }
+				  
+				  System.out.println("...............................................");
+				  //Delete the item from the list- names.remove(0);
+				  names.remove(1);
+				  //again Print all items inside the list
+				  
+				  for(String eachNames : names) { 
+					  System.out.println(eachNames);
+				  
+				  } 
+				  System.out.println("...............................................");
+				  
+				  System.out.println(names.contains("abc"));
+				  
+				  System.out.println("...............................................");
+				  
+				  System.out.println(names.contains("Daisy"));
+				  
+				  System.out.println("...............................................");
+				  names.clear();
+				  
+				  System.out.println(names.isEmpty());
+				  System.out.println("...............................................");*/
+				 
 
 	}
 

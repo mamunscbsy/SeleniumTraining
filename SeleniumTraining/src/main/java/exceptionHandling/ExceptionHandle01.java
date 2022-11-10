@@ -29,8 +29,11 @@ public class ExceptionHandle01 {
 		System.err.println("The element not enter successfully");
 	
 			}
+			finally {
 			
 			System.out.println("Test case is completed");
+			
+			}
 			
 			driver.close();
 	}

@@ -9,13 +9,13 @@ public class NavigateCommands {
 
 
 		//For Chrome Browser
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\mamun\\eclipse-workspace\\SeleniumTraining\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		
 		WebDriver driver = new ChromeDriver();
 		
 		driver.manage().window().maximize();
 		
-		
+		//Load url/Navigate to Google
 		driver.get("http://google.com"); //Navigate to Google(it is a simplify of navigate To)
 		
 		Thread.sleep(3000);
@@ -34,9 +34,9 @@ public class NavigateCommands {
 		
 		driver.navigate().refresh(); //It will refresh the page
 		
-		//driver.close(); //Will close your current/active WebPage/page 
+		driver.close(); //Will close your current/active WebPage/page 
 		
-		driver.quit(); // It will close the .exe driver and it will close all browsers which opened by Selenium
+		//driver.quit(); // It will close the .exe driver and it will close all browsers which opened by Selenium
 		
 			
 		

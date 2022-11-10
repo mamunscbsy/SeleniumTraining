@@ -48,10 +48,10 @@ public class DeleteLead {
 		driver.findElementByXPath("//input[@name='phoneAreaCode']").sendKeys("682");
 
 		//enter phone number
-		driver.findElementByXPath("//input[@name='phoneNumber']").sendKeys("2084048");
+		driver.findElementByXPath("//input[@name='phoneNumber']").sendKeys("1234567890");
 
 		//enter email address
-		//driver.findElementByXPath("//input[@name='emailAddress']").sendKeys("abc@abc.com");
+		//driver.findElementByXPath("//input[@name='emailAddress']").sendKeys("abc@yahoo.com");
 
 		//click Find leads button
 		driver.findElementByXPath("//button[text()='Find Leads']").click();
@@ -81,7 +81,8 @@ public class DeleteLead {
 		String errorMsg = driver.findElementByXPath("//div[text()='No records to display']").getText();
 		System.out.println(errorMsg);
 
-		if(errorMsg.contains("No records")) { 
+
+		if(errorMsg.contains("No records")){ 
 			System.out.println("ErrorMsg is matched");
 		}
 		else {

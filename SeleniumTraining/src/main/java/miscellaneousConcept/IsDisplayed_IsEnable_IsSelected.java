@@ -1,7 +1,5 @@
 package miscellaneousConcept;
 
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -36,11 +34,12 @@ public class IsDisplayed_IsEnable_IsSelected {
 		System.out.println(title);
 
 		//Assertion
-		Assert.assertEquals(title,"Bank of America | Online Banking | Sign In | Online ID", "Asserting page Title");
-
+		//Assert.assertEquals(title,"Bank of America | Online Banking | Sign In | Online ID", "Asserting page Title");
+		Assert.assertEquals(title, "Bank of America | Online Banking | Log In | User ID","Verifiy page title");
+		
 		//isDisplayed(); -"Bank of America" Logo is displayed (true/false)
 		boolean logo = driver.findElement(By.xpath("//img[@alt='Bank of America']")).isDisplayed();
-
+		System.out.println(logo);
 		//Assertion
 		Assert.assertTrue(logo, "logo is displayed");
 

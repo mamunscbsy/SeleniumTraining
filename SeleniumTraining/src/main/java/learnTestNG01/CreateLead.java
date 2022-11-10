@@ -16,11 +16,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CreateLead {
 
+	//public static void main(String[] args) throws InterruptedException {
+		
 	@Test
-	public void creatLead() throws InterruptedException {
-
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\mamun\\Selenium\\Selenium\\drivers\\chromedriver.exe");
+	public void createLead() throws InterruptedException {
+		
+		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 		// WebDriverManager.firefoxdriver().setup();
 	
 		ChromeDriver driver = new ChromeDriver();
@@ -201,6 +202,6 @@ public class CreateLead {
 		} else {
 			System.out.println("Not Match");
 		}
-
+		driver.close();
 	}
 }

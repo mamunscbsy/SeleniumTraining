@@ -6,7 +6,6 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 
 import utils_IntegrateExcelWDatapro.ReadExcel;
@@ -20,7 +19,7 @@ public class ParametersPSW {
 	@BeforeMethod
 	public void login(String url, String uname, String pwd) { 
 
-		System.setProperty("webdriver.chrome.driver","C:\\SeleniumSoft\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 		driver = new ChromeDriver();
 
 		//maximize
@@ -50,7 +49,7 @@ public class ParametersPSW {
 		driver.close();
 	}
 
-	@DataProvider
+	//@DataProvider
 	//public void getData() {
 	
 	//change return type as String[][]

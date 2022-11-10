@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 import wrapper.ParametersPSW;
 
 public class ParametersCreateLead extends ParametersPSW {
-
 	
 	@Test(dataProvider = "getData")
 	

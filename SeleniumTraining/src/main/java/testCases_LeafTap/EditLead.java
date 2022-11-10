@@ -6,11 +6,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class EditLead {
 
-	public static void main(String[] args)  {
-
+	public static void main(String[] args) throws InterruptedException  {
 
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\mamun\\eclipse-workspace\\SeleniumTraining\\drivers\\chromedriver.exe");
-
 
 		ChromeDriver driver = new ChromeDriver();
 
@@ -23,7 +21,7 @@ public class EditLead {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		//Enter Username - (Element level)
-		driver.findElementById("username1").sendKeys("DemoSalesManager");
+		driver.findElementById("username").sendKeys("DemoSalesManager");
 
 		//Enter Password - (Element level)
 		driver.findElementById("password").sendKeys("crmsfa");
@@ -63,9 +61,11 @@ public class EditLead {
 		driver.findElementByXPath("(//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/a)[1]").click();
 
 		Thread.sleep(3000);
+		
 		//Verify title of the page
 		String title = driver.getTitle();
 		System.out.println(title);
+		
 		if(title.contains("View")) {
 			System.out.println("Title matched");
 		} else {

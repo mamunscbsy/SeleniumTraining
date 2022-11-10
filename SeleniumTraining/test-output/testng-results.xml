@@ -1,17 +1,197 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21328" started-at="2021-12-14T18:02:02 CST" finished-at="2021-12-14T18:02:23 CST">
+  <suite name="Suite" duration-ms="83724" started-at="2022-11-05T09:19:07 CDT" finished-at="2022-11-05T09:20:30 CDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="21328" started-at="2021-12-14T18:02:02 CST" finished-at="2021-12-14T18:02:23 CST">
-      <class name="seleniumDemo.TagName">
-        <test-method status="PASS" signature="tagName()[pri:0, instance:seleniumDemo.TagName@d44fc21]" name="tagName" duration-ms="21283" started-at="2021-12-14T18:02:02 CST" finished-at="2021-12-14T18:02:23 CST">
+    <test name="Test" duration-ms="83724" started-at="2022-11-05T09:19:07 CDT" finished-at="2022-11-05T09:20:30 CDT">
+      <class name="integrateDataProWExcel.DataProvider_CreateLead">
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="login" is-config="true" duration-ms="9119" started-at="2022-11-05T09:19:07 CDT" finished-at="2022-11-05T09:19:16 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://leaftaps.com/opentaps]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[DemoSalesManager]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[crmsfa]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tagName -->
-      </class> <!-- seleniumDemo.TagName -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="createLead(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="createLead" duration-ms="11545" started-at="2022-11-05T09:19:16 CDT" data-provider="getData" finished-at="2022-11-05T09:19:28 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CTS]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Mahbuba]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Sultana]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createLead -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="closeBrowser" is-config="true" duration-ms="2448" started-at="2022-11-05T09:19:28 CDT" finished-at="2022-11-05T09:19:30 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="login" is-config="true" duration-ms="8382" started-at="2022-11-05T09:19:30 CDT" finished-at="2022-11-05T09:19:39 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://leaftaps.com/opentaps]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[DemoSalesManager]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[crmsfa]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="createLead(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="createLead" duration-ms="10369" started-at="2022-11-05T09:19:39 CDT" data-provider="getData" finished-at="2022-11-05T09:19:49 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[TCS]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Harun]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Chowdhury]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createLead -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="closeBrowser" is-config="true" duration-ms="2418" started-at="2022-11-05T09:19:49 CDT" finished-at="2022-11-05T09:19:51 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="login" is-config="true" duration-ms="9588" started-at="2022-11-05T09:19:51 CDT" finished-at="2022-11-05T09:20:01 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://leaftaps.com/opentaps]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[DemoSalesManager]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[crmsfa]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="createLead(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="createLead" duration-ms="10478" started-at="2022-11-05T09:20:01 CDT" data-provider="getData" finished-at="2022-11-05T09:20:12 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABC]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Neepa]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Khan]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createLead -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="closeBrowser" is-config="true" duration-ms="143" started-at="2022-11-05T09:20:12 CDT" finished-at="2022-11-05T09:20:12 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="login" is-config="true" duration-ms="8269" started-at="2022-11-05T09:20:12 CDT" finished-at="2022-11-05T09:20:20 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://leaftaps.com/opentaps]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[DemoSalesManager]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[crmsfa]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="createLead(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="createLead" duration-ms="10386" started-at="2022-11-05T09:20:20 CDT" data-provider="getData" finished-at="2022-11-05T09:20:30 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XYZ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Shakil]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ahmed]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createLead -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="closeBrowser" is-config="true" duration-ms="116" started-at="2022-11-05T09:20:30 CDT" finished-at="2022-11-05T09:20:30 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- integrateDataProWExcel.DataProvider_CreateLead -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

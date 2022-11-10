@@ -16,7 +16,7 @@ public class TagName {
 	
 	//public void tagName() throws InterruptedException {
 
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\mamun\\eclipse-workspace\\SeleniumTraining\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		// WebDriverManager.firefoxdriver().setup();
 
 		//Using WebDriver interface and create object of ChromeDriver class
@@ -58,6 +58,7 @@ public class TagName {
 
 		System.out.println(total);
 		System.out.println("Total webelements starting with TagName 'div' :" + total);
+		System.out.println("Total Tagname 'Div' :"  + total);
 
 		Thread.sleep(2000);
 		driver.close();

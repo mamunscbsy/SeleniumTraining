@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="takeSnapshots.CaptureScreenshot">
+      <class name="takeSnapshots.TakeScreenshots">
         <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="captureScreenshot"/>
+          <include name="createLead"/>
         </methods>
-      </class> <!-- takeSnapshots.CaptureScreenshot -->
+      </class> <!-- takeSnapshots.TakeScreenshots -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

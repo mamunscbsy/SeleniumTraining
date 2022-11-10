@@ -17,9 +17,9 @@ public class CreateLead extends ParametersPSW{
 		
 
 	@Test
-	public void createLead() throws InterruptedException  {
+	public void createLead() throws InterruptedException   {
 
-		System.setProperty("webdriver.chrome.driver","C:\\SeleniumSoft\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 		// WebDriverManager.firefoxdriver().setup();
 	
 		ChromeDriver driver = new ChromeDriver();
@@ -86,7 +86,7 @@ public class CreateLead extends ParametersPSW{
 		System.out.println(title);
 		
 				
-		if(title.contains("View")) {
+		if(title.equals("View")) {
 			System.out.println("Title matched");
 		} else {
 			System.out.println("Title not Matched");

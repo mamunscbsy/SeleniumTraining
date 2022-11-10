@@ -18,7 +18,7 @@ public class ProjectSpecificWrapper {
 	@BeforeMethod
 	public void login(String url, String uname, String pwd) { 
 
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\mamun\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		driver = new ChromeDriver();
 
 		//maximize
@@ -48,6 +48,7 @@ public class ProjectSpecificWrapper {
 	}
 	
 	@DataProvider
+	//public void getData(){
 	public String[][] getData() {
 	
 		//create object of 2D Array/declare 2D Array and write size of array(Row & column)
@@ -55,16 +56,20 @@ public class ProjectSpecificWrapper {
 		
 		
 		data[0][0] = "TCS";
-		data[0][1] = "Sumayla";
-		data[0][2] = "Choudhury";
+		data[0][1] = "Sultana";
+		data[0][2] = "Ferdous";
 		
 		data [1][0] = "ABC";
-		data [1][1] = "Mahbub";
-		data [1][2] = "Kabir";
+		data [1][1] = "Atiq";
+		data [1][2] = "Rahman";
 		
 		data [2][0] = "XYZ";
-		data [2][1] = "Moriom";
-		data [2][2] = "Akter";
+		data [2][1] = "Shahla";
+		data [2][2] = "Meem";
+		
+		return data;
+		
+		// return data;
 		
 		/*data [3][0] = "ABC";
 		data [3][1] = "Mamun";
@@ -79,7 +84,7 @@ public class ProjectSpecificWrapper {
 		data [5][2] = "Shakil";*/
 		
 		//add return type and change return type of getData()
-			return data;		
+			//return data;		
 		
 	}
 }

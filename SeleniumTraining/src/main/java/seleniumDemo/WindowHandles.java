@@ -21,57 +21,47 @@ public class WindowHandles {
 		//Click on- Try it Yourself
 		driver.findElementByPartialLinkText("Try it Yourself »").click();
 		
-		//String currentWindow = driver.getWindowHandle();
-
-		//String currentWindow = driver.getWindowHandle();
-		//System.out.println(currentWindow);
+		//1. getWindowHandle()-return only current window reference
+		//String FirstWindow = driver.getWindowHandle();
+		String CurrentWinRef = driver.getWindowHandle();
+		System.out.println("Current window reference = "  + CurrentWinRef);
+				
+		//Or Get current/first window reference
+		//String CurrentWin = driver.getWindowHandle();
+		//System.out.println(CurrentWin);
 		
-		//Get first window reference
-		String FirstWindow = driver.getWindowHandle();
-		System.out.println(FirstWindow);
+		//2. getWindowHandles()-returns all window reference
+	Set<String> allwinRef = driver.getWindowHandles();
 		
+		System.out.println(allwinRef);
 		
-		Set<String> allWin = driver.getWindowHandles();
-		
-		
-		//System.out.println(allWin);
-		
-		for (String eachWin : allWin) {
-			//System.out.println(eachWin);
+		// switching 1st window to 2nd window
+	for (String eachWin : allwinRef) {
+			System.out.println(eachWin);
 			
 			driver.switchTo().window(eachWin);
 			
 			System.out.println(driver.getTitle());
 			
 			//driver.close();
-		}
-		
-		/*for (String eachWin : allWin) {
-			//System.out.println(eachWin);
-			
-			driver.switchTo().window(eachWin);
-			
-			//System.out.println(driver.getTitle());
-			driver.close();
-		}*/
+		}	
 			
 		// After switch to 2nd window click on "Try it" button
 		
-		//Switch to frame for click on "Try it", because Try it button is inside a frame
+		//For click on "Try it" button, need to Switch a frame because "Try it" is design under a frame.
 
 		driver.switchTo().frame("iframeResult");
 	
 		// Click on Try it button
 		driver.findElementByXPath("//button[text()='Try it']").click();
-		
-	
-		//switch back to primary window/First window
-		driver.switchTo().window(FirstWindow);
+			
+		//switch back to primary window/First window (see above code of getWindowHandle() for FirstWindow)
+		driver.switchTo().window(CurrentWinRef);
 		
 		//Get title of First window (after back to first window)
 		System.out.println(driver.getTitle());
 		
-		// closing all the windows which open in this session/in this run
+		//closing all the windows which open in this session/in this run
 		driver.quit(); 
 
 		/*

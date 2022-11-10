@@ -8,7 +8,7 @@ public class ClickonAcookies {
 
 	public static void main(String[] args) throws InterruptedException {
 
-System.setProperty("webdriver.chrome.driver", "C:\\Users\\mamun\\eclipse-workspace\\SeleniumTraining\\drivers\\chromedriver.exe");
+System.setProperty("webdriver.chrome.driver", "C:\\Users\\mamun\\git\\repository\\SeleniumTraining\\drivers\\chromedriver.exe");
 		
 		//ChromeDriver is a class
 		ChromeDriver driver = new ChromeDriver();

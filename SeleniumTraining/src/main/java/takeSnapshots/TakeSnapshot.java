@@ -58,18 +58,21 @@ public class TakeSnapshot {
 		
 		}finally {
 		
-			//Take snapshot
+			//Take snapshot/ScreenShot
 				
 			File src = driver.getScreenshotAs(OutputType.FILE); // take snapshot and store in Temp File
 			
-			//location 1-the path/location where it store after move
+			//Path/location-1, where it will store after moved
 			File dest = new File("C:\\Users\\mamun\\Desktop\\snaps\\img.png"); //define the destination file
 				
-		// location 2-the path/location where it store after move
+		//Path/location-2, where it will store after moved
+		//File dest = new File("./snap/image.png");
+			
 		//File dest = new File("./snap/image.png");
 		
-		FileUtils.copyFile(src, dest); // moving file source to destination
-				
+			FileUtils.copyFile(src, dest);
+		//FileUtils.copyFile(src, dest); //moved file source to destination(img or image file)
+			
 		}
 		// click create lead
 		driver.findElementByXPath("//input[@value='Create Lead']").click();

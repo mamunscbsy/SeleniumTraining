@@ -11,7 +11,7 @@ public class DeleteLead {
 	
 	public void deleteLead() throws InterruptedException {
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\mamun\\Selenium\\Selenium\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		ChromeDriver driver = new ChromeDriver();
 		
 		//maximize

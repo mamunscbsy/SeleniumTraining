@@ -9,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class KeyDown {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
@@ -24,17 +24,18 @@ public class KeyDown {
 		driver.switchTo().frame(0);
 		
 		WebElement Item1 = driver.findElementByXPath("//li[text()='Item 1']");
-		
+		//WebElement Item2 = driver.findElementByXPath("//li[text()='Item 2']");
 		WebElement Item3 = driver.findElementByXPath("//li[text()='Item 3']");
 		
 		WebElement Item5 = driver.findElementByXPath("//li[text()='Item 5']");
 		
 		
 		Actions action = new Actions(driver);
-		action.keyDown(Keys.CONTROL).click(Item1).click(Item3).click(Item5).perform();
+		Thread.sleep(3000);
 		//action.keyDown(Keys.CONTROL).click(Item1).click(Item3).click(Item5).perform();
 		
-			
+		//action.keyDown(Keys.CONTROL).click(Item1).click(Item3).click(Item5).release().perform();
+			action.keyDown(Keys.CONTROL).click(Item1).click(Item3).click(Item5).release().perform();
 		
 	}
 

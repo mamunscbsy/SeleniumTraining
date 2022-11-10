@@ -20,7 +20,7 @@ public class ProjectSpecificWrapper {
 	@BeforeMethod
 	public void login(String url, String uname, String pwd) { 
 
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\mamun\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		driver = new ChromeDriver();
 
 		//maximize
@@ -49,7 +49,7 @@ public class ProjectSpecificWrapper {
 	}
 	
 	@DataProvider
-	public String[][] getData() throws IOException {
+	public String[][] getData() throws IOException  {
 	//public String[][] getData() {
 		
 		ReadExcel r1 = new ReadExcel();

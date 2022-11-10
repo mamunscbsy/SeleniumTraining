@@ -6,26 +6,15 @@ public class Test {
 
 		//create of object of BMW class
 		
-		//BMW obj = new BMW();
 		BMW obj = new BMW();
-		obj.applyHorn();
-		obj.applyBrake();
 		obj.applyMirror();
-		
-		obj.turnAC();
-		obj.absBrake();
-		
-		
-		obj.absBrake();
-		obj.turnAC();
-		
-		obj.absBrake();
-		obj.turnAC();
-		obj.applyHorn();
-		obj.applyBrake();
 		obj.applyMirror();
-					
-
-	}
+		obj.applyHorn();
+		obj.applyWheel();
+		obj.turnAC();
+		obj.applyBrake();
+		obj.absBrake();
+		
+			}
 
 }

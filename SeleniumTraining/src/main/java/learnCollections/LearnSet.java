@@ -11,14 +11,12 @@ public class LearnSet {
 	public static void main(String[] args) {
 
 
-		//Set<Integer> obt = new TreeSet<Integer>();
+		Set<Integer> obj = new TreeSet<Integer>();
+		
 		//Set<Integer> obj = new HashSet<Integer>();
-
+			
+		//Set<Integer> obj = new LinkedHashSet<Integer>();
 		//Set<Integer> obj = new HashSet<Integer>();
-
-		//Set<Integer> obj = new TreeSet<Integer>();
-		Set<Integer> obj = new LinkedHashSet<Integer>();
-
 
 		//1. add items in Set- use add()
 		obj.add(124);
@@ -30,7 +28,7 @@ public class LearnSet {
 		obj.add(101112);
 		obj.add(789);
 		obj.add(123);
-		//obj.add(000);
+		obj.add(000);
 		obj.add(789);
 
 		//2. Get count of Set- use size()
@@ -51,7 +49,7 @@ public class LearnSet {
 
 
 		//4. Check particular item from set- use contains() -output-true/false
-		System.out.println(obj.contains(101113));
+		System.out.println(obj.contains(101112));
 
 		System.out.println("****************");
 

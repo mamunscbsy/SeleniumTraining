@@ -25,16 +25,17 @@ public class Assertions {
 		String title = driver.getTitle();
 		System.out.println(title);
 
-		//Assertion
-		//Assert.assertEquals(title,"Bank of America | Online Banking | Sign In | Online ID", "Asserting page Title");
-		Assert.assertEquals(title, "Bank of America | Online Banking | Log In | Online ID","Asserting page title");
+		//Assertion Syntax: Assert.assertEquals(Actual result,"Expected result","Assert Message");
+		Assert.assertEquals(title, "Bank of America | Online Banking | Log In | User ID","Asserting page title");
+		
 	
 		//isDisplayed(); -"Bank of America" Logo is displayed (true/false)
 		boolean logo = driver.findElement(By.xpath("//img[@alt='Bank of America']")).isDisplayed();
 
 		//Assertion
+		//Assert.assertTrue(logo, "logo is displayed");
 		Assert.assertTrue(logo, "logo is displayed");
-
+		
 		//isEnabled() -Get The App link is Enable(true/false)
 		boolean getTheAppLink = driver.findElement(By.xpath("//a[@id='choose-device-get-the-app']/span[1]")).isEnabled();
 		if(getTheAppLink==true) {
@@ -53,14 +54,14 @@ driver.findElement(By.linkText("Admin")).click();*/
 		//isSelected();-to do this validation we can use only-RadioButton,a CheckBox & Drop-down (true/false)
 		//1st click on the "Save this online Id CheckBox"(select) then verify isSelected() otherwise else part will be work
 		driver.findElement(By.xpath("//div[@class='remember-info']/input ")).click();
-		boolean SaveThisOnlineIdCheckbox = driver.findElement(By.xpath("//div[@class='remember-info']/input ")).isSelected();
-		System.out.println(SaveThisOnlineIdCheckbox);
+		boolean SaveThisUserID = driver.findElement(By.xpath("//div[@class='remember-info']/input ")).isSelected();
+		System.out.println(SaveThisUserID);
 
 		//Assertion
-		Assert.assertTrue(SaveThisOnlineIdCheckbox, "SaveThisOnlineId CheckBox is selected");
+		Assert.assertTrue(SaveThisUserID, "SaveThisUserID CheckBox is selected");
 
 		//Validation
-		if(SaveThisOnlineIdCheckbox==true) {
+		if(SaveThisUserID ==true) {
 			System.out.println("The checkbox is Selected");
 		}else {
 			System.out.println("The checkbox is not Selected");
