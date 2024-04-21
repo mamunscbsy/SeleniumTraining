@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 public class DuplicateLead {
 
 	@Test
-
 	public void duplicateLead() throws InterruptedException {
 
 		System.setProperty("webdriver.chrome.driver",
@@ -51,7 +50,7 @@ public class DuplicateLead {
 
 		Thread.sleep(3000);
 		// Capture name of First Resulting lead
-		String FirstResultingLead = driver.findElementByXPath("(//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/a)[1]").getText();
+		/*String FirstResultingLead = driver.findElementByXPath("(//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/a)[1]").getText();
 		// String FirstResultingLead =	driver.findElementByXPath("(//a[@href='/crmsfa/control/viewLead?partyId=11447'])[1]").getText();
 		System.out.println(FirstResultingLead);
 
@@ -86,7 +85,8 @@ public class DuplicateLead {
 		}
 
 		Thread.sleep(3000);
-		// Close the browser do not log out
+		// Close the browser do not log out*/
+		
 		driver.close();
 	}
 

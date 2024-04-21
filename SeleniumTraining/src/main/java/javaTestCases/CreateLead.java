@@ -14,6 +14,7 @@ public class CreateLead {
 	public static void main(String[] args) throws InterruptedException {
 
 
+		//System.setProperty("webdriver.chrome.driver","C:\\Users\\mamun\\Downloads\\chromedriver-win64 (1)\\chromedriver-win64\\chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 		//WebDriverManager.firefoxdriver().setup();
 	
@@ -29,19 +30,22 @@ public class CreateLead {
 
 		// Enter Username - (Element level)
 		//driver.findElementById("username").sendKeys("DemoSalesManager");
+	
+		//using Xpath
 		driver.findElementByXPath("//input[@id='username']").sendKeys("DemoSalesManager");
+	
 		//String cssValue = driver.findElementById("username").getCssValue("id");
 		//System.out.println(cssValue);
 		
 		// Enter Password - (Element level)
 		//driver.findElementById("password").sendKeys("crmsfa");
-		driver.findElementByXPath("//input[@id='password']").sendKeys("crmsfa");
+		driver.findElementByXPath("//input[@name='PASSWORD']").sendKeys("crmsfa");
 
 		// Click Login Button - (Element level)
 		//driver.findElementByClassName("decorativeSubmit").click();
-		driver.findElementByXPath("//input[@value='Login']").click();
+	driver.findElementByXPath("//input[@class='decorativeSubmit']").click();
 
-		// click crm/sfa link
+	// click crm/sfa link
 		driver.findElementByLinkText("CRM/SFA").click();
 
 		//click leads
@@ -49,14 +53,16 @@ public class CreateLead {
 		
 
 		//click create lead link
-		driver.findElementByLinkText("Create Lead").click();
+		//driver.findElementByLinkText("Create Lead").click();
+		driver.findElementByXPath("//a[text()='Create Lead']").click();
 
 		//company name
-		driver.findElementById("createLeadForm_companyName").sendKeys("TCS");
+		driver.findElementByXPath("//input[contains(@id,'yName')]").sendKeys("ABC");
+	//	driver.findElementById("createLeadForm_companyName").sendKeys("TCS");
 
 		// enter firstName
 		
-		try {
+	try {
 			driver.findElementByCssSelector("input#createLeadForm_firstName").sendKeys("Hema");
 		} catch (NoSuchElementException e) {
 			System.out.println("The element not found");
@@ -72,25 +78,35 @@ public class CreateLead {
 		WebElement src = driver.findElementById("createLeadForm_dataSourceId");
 		Select dd = new Select(src);
 		dd.selectByVisibleText("Website");
+		//dd.selectByIndex(0);
+		
+		driver.findElementByXPath("//input[@name='submitButton']").click();
 		
 		// choose ownership
-		WebElement ele = driver.findElementByName("ownershipEnumId");
+	/*	WebElement ele = driver.findElementByName("ownershipEnumId");
 		Select dd2 = new Select(ele);
 		dd2.selectByVisibleText("Sole Proprietorship");
 		
 		// Click Create lead button
-		driver.findElementByXPath("//input[@name='submitButton']").click();
+		//driver.findElementByXPath("//input[@name='submitButton']").click();
+		driver.findElementByXPath("//input[@value='Create Lead']").click();*/
 
-		//Verify title of the page
+		//Verify title of the page- Verification
 		String title = driver.getTitle();
 		System.out.println(title);
 		
+		//using-equals()
+		if(title.equals("View Lead | opentaps CRM")) {
+			System.out.println("Title is matched");
+		}else {
+			System.out.println("Title not matched");
+		}
 		//using-contains()
-		if(title.contains("View")) {
+		/*if(title.contains("View")) {
 			System.out.println("Title matched");
 		} else {
 			System.out.println("Title not Matched");
-		}
+		}*/
 				
 		//close browser
 		driver.close();

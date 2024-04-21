@@ -20,6 +20,7 @@ public class TagName {
 		// WebDriverManager.firefoxdriver().setup();
 
 		//Using WebDriver interface and create object of ChromeDriver class
+		
 		WebDriver driver = new ChromeDriver();
 		
 		// load URL
@@ -44,8 +45,7 @@ public class TagName {
 		// click crm/sfa link
 		driver.findElement(By.linkText("CRM/SFA")).click();
 		
-		//Find how many a tag in this page
-		//List<WebElement> linkList = driver.findElements(By.tagName("a"));
+		//Find, how many a tag(link) in this page
 		List<WebElement> linkList = driver.findElements(By.tagName("a"));
 		System.out.println(linkList.size());
 		
@@ -59,7 +59,7 @@ public class TagName {
 		System.out.println(total);
 		System.out.println("Total webelements starting with TagName 'div' :" + total);
 		System.out.println("Total Tagname 'Div' :"  + total);
-
+		System.out.println("My name is "  + "Mamun");
 		Thread.sleep(2000);
 		driver.close();
 	}

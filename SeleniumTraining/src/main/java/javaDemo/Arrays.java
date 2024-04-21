@@ -28,27 +28,28 @@ public class Arrays {
 
 				//NonPrimitive Datatype (String, Arrays, Classes and Interfaces)
 				
-			String txt = "Atiq"; // data type
+			String txt = "Atiq"; //data type
 
 
 				// syntax for Arrays:
 				// String [] names = {"yousuf", "shihab", "Mamun"};	
 		//	String [] names = {"Atiq","Meem","Naz"};
 			String [] list = {"book","book2","book3"};
-			
+			String [] books = {"book", "book2", "book3","book4"};
 			//1. How to store the values into Arrays(Note: Two ways available)
 						
 				// way-1- examples
 			//int [] prices = {10,12,13,15,20,25};
 			//String [] emp = {"Harun","Reza", "Daizy", "Touhid","Shipan","Sumaiya"};
 			
-			//Examples-1 (integer type)
+			//Examples-1 (integer type)-id is a array
 			int [] id = {10,20,30,40,50,60}; //array.length
 			
 			//Get count of arrays -array.length
 			System.out.println(id.length);
 			System.out.println("................................");
-			//Get particular value from arrays			
+			//Get particular value from arrays	
+			System.out.println(id[0]);
 			System.out.println(id[3]);
 			System.out.println(id[1]);
 			System.out.println(id[5]);
@@ -76,14 +77,17 @@ public class Arrays {
 				//ClassName obj = new ClassName();
 				
 			//String[] names = new String[4];
-			String [] emp = new String [5];
-			//String [] emp1 = new String [6];
+			String [] empname = new String[5];
+			
+			String [] emp = new String [7];
+			
 			emp[0]= "Reza";
 			emp[1]= "Daisy";
 			emp[2]= "Tushar";
 			emp[3]= "Shakil";
 			emp[4]= "Sumit";
 			emp[5]= "Atik";
+			emp[6]= "mamun";
 			
 			/*String [] obj = new String[5];
 				obj[0]=	"rumel";

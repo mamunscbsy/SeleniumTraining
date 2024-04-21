@@ -16,22 +16,24 @@ public class StepsDefinition {
 
 	@Given("Launch chrome browser and load url") 
 	public void launchChromeBrowserAndLoadUrl() {
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\mamun\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 
-		driver = new ChromeDriver(); // For Chrome
+		driver = new ChromeDriver(); 
 		driver.get("http://leaftaps.com/opentaps");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
-	@Given("enter username as demosalesmanager")
-	public void enterUsernameAsDemosalesmanager() {
-		driver.findElementById("username").sendKeys("DemoSalesManager");
+	//@Given("enter username as demosalesmanager")
+	@Given("enter username as (.*)")
+	public void enterUsernameAsDemosalesmanager(String uname) {
+		driver.findElementById("username").sendKeys(uname);
 	}
 
-	@Given("enter password as crmsfa")
-	public void enterPasswordAsCrmsfa() {
-		driver.findElementById("password").sendKeys("crmsfa");
+	//@Given("enter password as crmsfa")
+	@Given("enter password as (.*)")
+	public void enterPasswordAsCrmsfa(String pwd) {
+		driver.findElementById("password").sendKeys(pwd);
 	}
 
 	@When("click the login button")
@@ -49,29 +51,32 @@ public class StepsDefinition {
 		driver.findElementByLinkText("CRM/SFA").click();
 	}
 
-	@Given("click leads")
+	/*@Given("click leads")
 	public void clickLeads() {
 		driver.findElementByLinkText("Leads").click();
-	}
+	}*/
 
 	@Given("click createLead")
 	public void clickCreateLead() {
 		driver.findElementByLinkText("Create Lead").click();
 	}
 
-	@When("enter the company as ABC")
-	public void enterTheCompanyAsABC() {
-		driver.findElementByXPath("//input[@id='createLeadForm_companyName']").sendKeys("ABC");
+	//@When("enter the company as ABC")
+	@When("enter the company as (.*)")
+	public void enterTheCompanyAsABC(String cname) {
+		driver.findElementByXPath("//input[@id='createLeadForm_companyName']").sendKeys(cname);
 	}
 
-	@When("enter the firstname as Hema")
-	public void enterTheFirstNameAsHema() {
-		driver.findElementByXPath("//input[@id='createLeadForm_firstName']").sendKeys("Hema");
+	//@When("enter the firstname as Hema")
+	@When("enter the firstname as (.*)")
+	public void enterTheFirstNameAsHema(String fname) {
+		driver.findElementByXPath("//input[@id='createLeadForm_firstName']").sendKeys(fname);
 	}
 
-	@When("enter the lastname as Mali")
-	public void enterTheLastNameAsMali() {
-		driver.findElementByXPath("//input[@id='createLeadForm_lastName']").sendKeys("Mali");
+	//@When("enter the lastname as Mali")
+	@When("enter the lastname as (.*)")
+	public void enterTheLastNameAsMali(String lname) {
+		driver.findElementByXPath("//input[@id='createLeadForm_lastName']").sendKeys(lname);
 	}
 
 	@When("click the create lead button")
@@ -92,11 +97,12 @@ public class StepsDefinition {
 	public void close_browser() {
 		driver.quit();
 	}
-	@Given("enter username as ssssss")
+	/*//@Given("enter username as ssssss")
 	public void enterUsernameAsSsssss() {
 		driver.findElementById("username").sendKeys("ssssss");
 
-	}
+	}*/
+	
 	@Then("verify error msg")
 	public void verifyErrMsg() {
 		String text = driver.findElementById("errorDiv").getText();

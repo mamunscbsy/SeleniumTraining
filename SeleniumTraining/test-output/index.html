@@ -5,8 +5,9 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
-    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -23,6 +24,7 @@
   <body>
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
+      <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
@@ -49,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>C:\Users\mamun\git\repository\SeleniumTraining\testngExcelDataPro.xml</span>
+                    <span>C:\Users\mamun\git\repository\SeleniumTraining\testngS.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,22 +104,27 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="integrateDataProWExcel.DataProvider_CreateLead" hash-for-method="createLead(TCS, Harun, Chowdhury)">createLead(TCS, Harun, Chowdhury)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tc_ConnectInheritanceConcept.CreateLead" hash-for-method="createLead">createLead</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="integrateDataProWExcel.DataProvider_CreateLead" hash-for-method="createLead(XYZ, Shakil, Ahmed)">createLead(XYZ, Shakil, Ahmed)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tc_ConnectInheritanceConcept.CreateLead" hash-for-method="createLead">createLead</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="integrateDataProWExcel.DataProvider_CreateLead" hash-for-method="createLead(ABC, Neepa, Khan)">createLead(ABC, Neepa, Khan)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tc_ConnectInheritanceConcept.CreateLead" hash-for-method="createLead">createLead</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="integrateDataProWExcel.DataProvider_CreateLead" hash-for-method="createLead(CTS, Mahbuba, Sultana)">createLead(CTS, Mahbuba, Sultana)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tc_ConnectInheritanceConcept.DeleteLead" hash-for-method="deleteLead">deleteLead</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tc_ConnectInheritanceConcept.EditLead" hash-for-method="editLead">editLead</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -135,39 +142,58 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">integrateDataProWExcel.DataProvider_CreateLead</span>
+              <span class="class-name">tc_ConnectInheritanceConcept.CreateLead</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createLead(TCS, Harun, Chowdhury)">
-                  </a> <!-- createLead(TCS, Harun, Chowdhury) -->
+                  <a name="createLead">
+                  </a> <!-- createLead -->
                   <span class="method-name">createLead</span>
-                  <span class="parameters">(TCS, Harun, Chowdhury)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="createLead(XYZ, Shakil, Ahmed)">
-                  </a> <!-- createLead(XYZ, Shakil, Ahmed) -->
+                  <a name="createLead">
+                  </a> <!-- createLead -->
                   <span class="method-name">createLead</span>
-                  <span class="parameters">(XYZ, Shakil, Ahmed)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="createLead(ABC, Neepa, Khan)">
-                  </a> <!-- createLead(ABC, Neepa, Khan) -->
+                  <a name="createLead">
+                  </a> <!-- createLead -->
                   <span class="method-name">createLead</span>
-                  <span class="parameters">(ABC, Neepa, Khan)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tc_ConnectInheritanceConcept.DeleteLead</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createLead(CTS, Mahbuba, Sultana)">
-                  </a> <!-- createLead(CTS, Mahbuba, Sultana) -->
-                  <span class="method-name">createLead</span>
-                  <span class="parameters">(CTS, Mahbuba, Sultana)</span>
+                  <a name="deleteLead">
+                  </a> <!-- deleteLead -->
+                  <span class="method-name">deleteLead</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tc_ConnectInheritanceConcept.EditLead</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="editLead">
+                  </a> <!-- editLead -->
+                  <span class="method-name">editLead</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -175,19 +201,18 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\mamun\git\repository\SeleniumTraining\testngExcelDataPro.xml</span>
+            <span class="header-content">C:\Users\mamun\git\repository\SeleniumTraining\testngS.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
-  &lt;parameter name=&quot;uname&quot; value=&quot;DemoSalesManager&quot;/&gt;
-  &lt;parameter name=&quot;pwd&quot; value=&quot;crmsfa&quot;/&gt;
-  &lt;parameter name=&quot;url&quot; value=&quot;http://leaftaps.com/opentaps&quot;/&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot; parallel=&quot;classes&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot; parallel=&quot;classes&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;integrateDataProWExcel.DataProvider_CreateLead&quot;/&gt;
+      &lt;class name=&quot;tc_ConnectInheritanceConcept.CreateLead&quot;/&gt;
+      &lt;class name=&quot;tc_ConnectInheritanceConcept.EditLead&quot;/&gt;
+      &lt;class name=&quot;tc_ConnectInheritanceConcept.DeleteLead&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -201,7 +226,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -227,28 +252,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createLead')
-data.setCell(0, 2, 'integrateDataProWExcel.DataProvider_CreateLead')
-data.setCell(0, 3, 11545);
+data.setCell(0, 1, 'editLead')
+data.setCell(0, 2, 'tc_ConnectInheritanceConcept.EditLead')
+data.setCell(0, 3, 26301);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'createLead')
-data.setCell(1, 2, 'integrateDataProWExcel.DataProvider_CreateLead')
-data.setCell(1, 3, 10478);
+data.setCell(1, 2, 'tc_ConnectInheritanceConcept.CreateLead')
+data.setCell(1, 3, 17933);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'createLead')
-data.setCell(2, 2, 'integrateDataProWExcel.DataProvider_CreateLead')
-data.setCell(2, 3, 10386);
+data.setCell(2, 2, 'tc_ConnectInheritanceConcept.CreateLead')
+data.setCell(2, 3, 16236);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'createLead')
-data.setCell(3, 2, 'integrateDataProWExcel.DataProvider_CreateLead')
-data.setCell(3, 3, 10369);
+data.setCell(3, 2, 'tc_ConnectInheritanceConcept.CreateLead')
+data.setCell(3, 3, 15678);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'deleteLead')
+data.setCell(4, 2, 'tc_ConnectInheritanceConcept.DeleteLead')
+data.setCell(4, 3, 4163);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 42 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -274,58 +303,95 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">integrateDataProWExcel.DataProvider_CreateLead</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tc_ConnectInheritanceConcept.DeleteLead</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">login(http://leaftaps.com/opentaps, DemoSalesManager, crmsfa)</span>
+                <span class="method-name">login</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tc_ConnectInheritanceConcept.CreateLead</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tc_ConnectInheritanceConcept.EditLead</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tc_ConnectInheritanceConcept.CreateLead</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">createLead(CTS, Mahbuba, Sultana)</span>
-                <span class="method-start">9119 ms</span>
+                <span class="method-name">createLead</span>
+                <span class="method-start">23006 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tc_ConnectInheritanceConcept.EditLead</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">editLead</span>
+                <span class="method-start">23768 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tc_ConnectInheritanceConcept.DeleteLead</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">deleteLead</span>
+                <span class="method-start">24973 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">20669 ms</span>
+                <span class="method-start">29139 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tc_ConnectInheritanceConcept.CreateLead</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">39243 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">login(http://leaftaps.com/opentaps, DemoSalesManager, crmsfa)</span>
-                <span class="method-start">23117 ms</span>
+                <span class="method-name">login</span>
+                <span class="method-start">39378 ms</span>
               </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tc_ConnectInheritanceConcept.EditLead</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">50070 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tc_ConnectInheritanceConcept.CreateLead</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">createLead(TCS, Harun, Chowdhury)</span>
-                <span class="method-start">31499 ms</span>
+                <span class="method-name">createLead</span>
+                <span class="method-start">56009 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">41869 ms</span>
+                <span class="method-start">73942 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">login(http://leaftaps.com/opentaps, DemoSalesManager, crmsfa)</span>
-                <span class="method-start">44288 ms</span>
+                <span class="method-name">login</span>
+                <span class="method-start">74083 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">createLead(ABC, Neepa, Khan)</span>
-                <span class="method-start">53876 ms</span>
+                <span class="method-name">createLead</span>
+                <span class="method-start">91628 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">64354 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">login(http://leaftaps.com/opentaps, DemoSalesManager, crmsfa)</span>
-                <span class="method-start">64498 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">createLead(XYZ, Shakil, Ahmed)</span>
-                <span class="method-start">72768 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">closeBrowser</span>
-                <span class="method-start">83156 ms</span>
+                <span class="method-start">107307 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
 </html>

@@ -12,7 +12,7 @@ public class CreateLead extends ProjectSpecificWrapper{
 
 	//public static void main(String[] args) throws InterruptedException {
 
-	@Test
+	@Test(invocationCount=3) //CreateLead test will run 3 times
 	public void createLead() throws InterruptedException {
 
 		//click leads

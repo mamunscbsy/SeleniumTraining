@@ -21,21 +21,21 @@ public class InfiniteScroll {
 		driver.get("http://the-internet.herokuapp.com/");
 	}
 	@Test
-	public void infiniteScroll() {
+	public void infiniteScroll() throws InterruptedException {
 		driver.findElement(By.linkText("Infinite Scroll")).click();
 
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 
-		long initialHeight = (long)(jse.executeScript("return document.body.scrollHeight"));
+		//long initialHeight = (long)(jse.executeScript("return document.body.scrollHeight"));
 
 		while(true) {
 			jse.executeScript("window.scrollTo(0,document.body.scrollHeight)");
 			Thread.sleep(2000);
-			long currentlHeight = (long)(jse.executeScript("return document.body.scrollHeight"));
-			if(initialHeight==currentlHeight) {
+		//	long currentlHeight = (long)(jse.executeScript("return document.body.scrollHeight"));
+		//	if(initialHeight==currentlHeight) {
 				break;
 			}
-			initialHeight == currentlHeight;
+		//	initialHeight == currentlHeight;
 		}
 		@AfterTest
 		public void close()

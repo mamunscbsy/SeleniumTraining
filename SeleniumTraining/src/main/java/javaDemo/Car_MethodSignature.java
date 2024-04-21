@@ -4,13 +4,15 @@ public class Car_MethodSignature {
 
 	public static void main(String[] args) {
 		
-		//horn();
+		//horn(); //we can;t call non-static method inside static/main method
 				
-		addTwoNum(20, 30); //static methods we can directly called from static/main method
+		addTwoNum(20, 30); //static methods we can directly called from/under main/static method
 		addTwoString("Hello"," World");
+		substructTwoNum(100,30);
+		
 		
 		//Syntax of object creation of a class
-		// className obj = new calssName();
+		//className obj = new calssName();
 		
 		Car_MethodSignature obj = new Car_MethodSignature();
 		obj.drive();
@@ -27,6 +29,8 @@ public class Car_MethodSignature {
 		
 		obj.mirror();
 		obj.mirror();
+		
+		obj.num(10);
 		
 		
 		obj.add(10, 20);
@@ -66,7 +70,11 @@ public class Car_MethodSignature {
 	public int add(int a, int b) {
 		 //parameterized methods, because we pass two arguments in this method
 		System.out.println(a+b);
-		return a+b;
+		return a+b;		
+	}
+	public int num(int a) {
+		System.out.println(a);
+		return a;
 		
 	}
 	//Below is the example of static methods, and don't need to create object of static methods
@@ -80,6 +88,11 @@ public class Car_MethodSignature {
 		System.out.println(x+y);
 		return x+y;
 		}
+	public static int substructTwoNum(int a, int b) {
+		System.out.println(a-b);
+		return a-b;
+		
+	}
 			
 		/*public void driving() {
 				

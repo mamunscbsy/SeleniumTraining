@@ -8,7 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
-import utils_IntegrateExcelWDatapro.ReadExcel;
+import utils_IntegrateExcelwithDataprovider.ReadExcel;
 
 public class ParametersPSW {
 
@@ -53,7 +53,7 @@ public class ParametersPSW {
 	//public void getData() {
 	
 	//change return type as String[][]
-	public String[][] getData() throws IOException {
+	//public String[][] getData() throws IOException {
 
 		//Declare 2D Array
 		/*String [][] data = new String[2][3];
@@ -66,11 +66,11 @@ public class ParametersPSW {
 		data[1][1] = "Lovely";
 		data[1][2] = "Rawshan"; */
 		
-		ReadExcel r1 = new ReadExcel();
-		return r1.readExcel();
-
+		//return data;
 		
+		//ReadExcel r1 = new ReadExcel();
+	//	return r1.readExcel();
 
 	}
 
-}
+

@@ -88,8 +88,7 @@ public class IsSelected {
 			System.out.println("The Sales checkbox is not Selected");
 		}
 		
-		driver.quit();
-		
+		driver.quit();		
 		
 //		driver.findElement(By.xpath("//*[@id=\'right_col_bottom\']/ul/li[1]/a")).click();
 //		

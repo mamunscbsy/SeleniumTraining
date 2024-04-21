@@ -1,197 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="83724" started-at="2022-11-05T09:19:07 CDT" finished-at="2022-11-05T09:20:30 CDT">
+  <suite name="Suite" duration-ms="107478" started-at="2024-04-04T16:41:01 CDT" finished-at="2024-04-04T16:42:48 CDT">
     <groups>
     </groups>
-    <test name="Test" duration-ms="83724" started-at="2022-11-05T09:19:07 CDT" finished-at="2022-11-05T09:20:30 CDT">
-      <class name="integrateDataProWExcel.DataProvider_CreateLead">
-        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="login" is-config="true" duration-ms="9119" started-at="2022-11-05T09:19:07 CDT" finished-at="2022-11-05T09:19:16 CDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[http://leaftaps.com/opentaps]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[DemoSalesManager]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[crmsfa]]>
-              </value>
-            </param>
-          </params>
+    <test name="Test" duration-ms="107478" started-at="2024-04-04T16:41:01 CDT" finished-at="2024-04-04T16:42:48 CDT">
+      <class name="tc_ConnectInheritanceConcept.EditLead">
+        <test-method status="PASS" signature="login()[pri:0, instance:tc_ConnectInheritanceConcept.EditLead@32eebfca]" name="login" is-config="true" duration-ms="23768" started-at="2024-04-04T16:41:01 CDT" finished-at="2024-04-04T16:41:25 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="createLead(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="createLead" duration-ms="11545" started-at="2022-11-05T09:19:16 CDT" data-provider="getData" finished-at="2022-11-05T09:19:28 CDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[CTS]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Mahbuba]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Sultana]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="editLead()[pri:0, instance:tc_ConnectInheritanceConcept.EditLead@32eebfca]" name="editLead" duration-ms="26301" started-at="2024-04-04T16:41:25 CDT" finished-at="2024-04-04T16:41:51 CDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createLead -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="closeBrowser" is-config="true" duration-ms="2448" started-at="2022-11-05T09:19:28 CDT" finished-at="2022-11-05T09:19:30 CDT">
+        </test-method> <!-- editLead -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tc_ConnectInheritanceConcept.EditLead@32eebfca]" name="closeBrowser" is-config="true" duration-ms="120" started-at="2024-04-04T16:41:51 CDT" finished-at="2024-04-04T16:41:51 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="login" is-config="true" duration-ms="8382" started-at="2022-11-05T09:19:30 CDT" finished-at="2022-11-05T09:19:39 CDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[http://leaftaps.com/opentaps]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[DemoSalesManager]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[crmsfa]]>
-              </value>
-            </param>
-          </params>
+      </class> <!-- tc_ConnectInheritanceConcept.EditLead -->
+      <class name="tc_ConnectInheritanceConcept.DeleteLead">
+        <test-method status="PASS" signature="login()[pri:0, instance:tc_ConnectInheritanceConcept.DeleteLead@4e718207]" name="login" is-config="true" duration-ms="24973" started-at="2024-04-04T16:41:01 CDT" finished-at="2024-04-04T16:41:26 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="createLead(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="createLead" duration-ms="10369" started-at="2022-11-05T09:19:39 CDT" data-provider="getData" finished-at="2022-11-05T09:19:49 CDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[TCS]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Harun]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Chowdhury]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="deleteLead()[pri:0, instance:tc_ConnectInheritanceConcept.DeleteLead@4e718207]" name="deleteLead" duration-ms="4163" started-at="2024-04-04T16:41:26 CDT" finished-at="2024-04-04T16:41:30 CDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createLead -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="closeBrowser" is-config="true" duration-ms="2418" started-at="2022-11-05T09:19:49 CDT" finished-at="2022-11-05T09:19:51 CDT">
+        </test-method> <!-- deleteLead -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tc_ConnectInheritanceConcept.DeleteLead@4e718207]" name="closeBrowser" is-config="true" duration-ms="161" started-at="2024-04-04T16:41:30 CDT" finished-at="2024-04-04T16:41:30 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="login" is-config="true" duration-ms="9588" started-at="2022-11-05T09:19:51 CDT" finished-at="2022-11-05T09:20:01 CDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[http://leaftaps.com/opentaps]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[DemoSalesManager]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[crmsfa]]>
-              </value>
-            </param>
-          </params>
+      </class> <!-- tc_ConnectInheritanceConcept.DeleteLead -->
+      <class name="tc_ConnectInheritanceConcept.CreateLead">
+        <test-method status="PASS" signature="login()[pri:0, instance:tc_ConnectInheritanceConcept.CreateLead@50d0686]" name="login" is-config="true" duration-ms="23004" started-at="2024-04-04T16:41:01 CDT" finished-at="2024-04-04T16:41:24 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="createLead(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="createLead" duration-ms="10478" started-at="2022-11-05T09:20:01 CDT" data-provider="getData" finished-at="2022-11-05T09:20:12 CDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ABC]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Neepa]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Khan]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="createLead()[pri:0, instance:tc_ConnectInheritanceConcept.CreateLead@50d0686]" name="createLead" duration-ms="16236" started-at="2024-04-04T16:41:24 CDT" finished-at="2024-04-04T16:41:40 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createLead -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="closeBrowser" is-config="true" duration-ms="143" started-at="2022-11-05T09:20:12 CDT" finished-at="2022-11-05T09:20:12 CDT">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tc_ConnectInheritanceConcept.CreateLead@50d0686]" name="closeBrowser" is-config="true" duration-ms="135" started-at="2024-04-04T16:41:40 CDT" finished-at="2024-04-04T16:41:40 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="login" is-config="true" duration-ms="8269" started-at="2022-11-05T09:20:12 CDT" finished-at="2022-11-05T09:20:20 CDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[http://leaftaps.com/opentaps]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[DemoSalesManager]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[crmsfa]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="login()[pri:0, instance:tc_ConnectInheritanceConcept.CreateLead@50d0686]" name="login" is-config="true" duration-ms="16631" started-at="2024-04-04T16:41:40 CDT" finished-at="2024-04-04T16:41:57 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="createLead(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="createLead" duration-ms="10386" started-at="2022-11-05T09:20:20 CDT" data-provider="getData" finished-at="2022-11-05T09:20:30 CDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[XYZ]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Shakil]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Ahmed]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="createLead()[pri:0, instance:tc_ConnectInheritanceConcept.CreateLead@50d0686]" name="createLead" duration-ms="17933" started-at="2024-04-04T16:41:57 CDT" finished-at="2024-04-04T16:42:15 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createLead -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:integrateDataProWExcel.DataProvider_CreateLead@e320068]" name="closeBrowser" is-config="true" duration-ms="116" started-at="2022-11-05T09:20:30 CDT" finished-at="2022-11-05T09:20:30 CDT">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tc_ConnectInheritanceConcept.CreateLead@50d0686]" name="closeBrowser" is-config="true" duration-ms="141" started-at="2024-04-04T16:42:15 CDT" finished-at="2024-04-04T16:42:15 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- integrateDataProWExcel.DataProvider_CreateLead -->
+        <test-method status="PASS" signature="login()[pri:0, instance:tc_ConnectInheritanceConcept.CreateLead@50d0686]" name="login" is-config="true" duration-ms="17545" started-at="2024-04-04T16:42:15 CDT" finished-at="2024-04-04T16:42:33 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="createLead()[pri:0, instance:tc_ConnectInheritanceConcept.CreateLead@50d0686]" name="createLead" duration-ms="15678" started-at="2024-04-04T16:42:33 CDT" finished-at="2024-04-04T16:42:48 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createLead -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tc_ConnectInheritanceConcept.CreateLead@50d0686]" name="closeBrowser" is-config="true" duration-ms="146" started-at="2024-04-04T16:42:48 CDT" finished-at="2024-04-04T16:42:48 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- tc_ConnectInheritanceConcept.CreateLead -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

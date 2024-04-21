@@ -45,7 +45,7 @@ public class TakeScreenshots {
 		driver.findElement(By.linkText("Create Lead")).click();
 
 		//enter Company Name
-		driver.findElement(By.id("createLeadForm_companyName")).sendKeys("ABC");
+		driver.findElement(By.id("createLeadForm_companyName")).sendKeys("XYZ");
 
 		//enter FirstName Name
 		driver.findElement(By.id("createLeadForm_firstName")).sendKeys("Hema");
@@ -58,13 +58,13 @@ public class TakeScreenshots {
 		//Take snapshot/ScreenShot
 		//File src = driver.getScreenshotAs(OutputType.FILE); // take snapshot and store in Temp File
 		File src = driver.getScreenshotAs(OutputType.FILE);
+	
 		//Path/location-1, where it will store after moved
-		//File dest = new File("C:\\Users\\mamun\\Desktop\\snaps\\img.png"); //define the destination file
-		//File dest = new File("C:\\Users\\mamun\\Desktop\\snaps\\image.png");
+		File dest = new File("C:\\Users\\mamun\\Desktop\\snaps\\img.png"); //define the destination file
+		
 		//Path/location-2, where it will store after moved
 
-		File dest = new File("./snap1/img.png");
-
+		//Store it in a Eclipse project folder - snap
 		//File dest = new File("./snap/image.png");
 
 		FileUtils.copyFile(src, dest);

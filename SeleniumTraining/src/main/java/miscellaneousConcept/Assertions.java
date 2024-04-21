@@ -5,14 +5,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Assertions {
 
 	public static void main(String[] args) {
 
-		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
+		//WebDriver driver = new ChromeDriver();
 
+		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
-
 		//maximize the window
 		driver.manage().window().maximize();
 
@@ -27,14 +30,16 @@ public class Assertions {
 
 		//Assertion Syntax: Assert.assertEquals(Actual result,"Expected result","Assert Message");
 		Assert.assertEquals(title, "Bank of America | Online Banking | Log In | User ID","Asserting page title");
-		
+	
 	
 		//isDisplayed(); -"Bank of America" Logo is displayed (true/false)
+		
 		boolean logo = driver.findElement(By.xpath("//img[@alt='Bank of America']")).isDisplayed();
 
 		//Assertion
-		//Assert.assertTrue(logo, "logo is displayed");
+		//Assert.assertTrue(condition, message);
 		Assert.assertTrue(logo, "logo is displayed");
+		
 		
 		//isEnabled() -Get The App link is Enable(true/false)
 		boolean getTheAppLink = driver.findElement(By.xpath("//a[@id='choose-device-get-the-app']/span[1]")).isEnabled();
@@ -59,7 +64,7 @@ driver.findElement(By.linkText("Admin")).click();*/
 
 		//Assertion
 		Assert.assertTrue(SaveThisUserID, "SaveThisUserID CheckBox is selected");
-
+		//Assert.assertTrue(condition, message);
 		//Validation
 		if(SaveThisUserID ==true) {
 			System.out.println("The checkbox is Selected");
@@ -67,6 +72,6 @@ driver.findElement(By.linkText("Admin")).click();*/
 			System.out.println("The checkbox is not Selected");
 		}
 
-		//driver.quit();
+		driver.quit();
 	}
 }

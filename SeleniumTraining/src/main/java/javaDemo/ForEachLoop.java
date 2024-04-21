@@ -9,12 +9,13 @@ public class ForEachLoop {
 		/*for(DataType eachCollections : Collection){
 					Statement(eachCollections );
 					}*/
+		
 		String [] Args= {"Meem", "Javed", "Mamun"};
 
 		for (String eachArgs : Args) {
-	System.out.println(eachArgs);
-}
-
+			System.out.println(eachArgs);
+		}
+		
 		//print all values from below nums Arrays using for each loop.
 		//Example-1
 		int[] nums = {10,20,30,40,50,60,70};
@@ -30,9 +31,9 @@ public class ForEachLoop {
 		//print all values from below names Arrays using for each loop.
 		//Example-2
 
-		String[] names = {"rumel", "lipee", "abcd", "rosy","neepa","rumi","milton","bely"};
+		String[] namess = {"rubel", "shewlee", "abcd", "rinku","neepa","rumi","mamun","bely"};
 
-		for(String eachNames : names ) {
+		for(String eachNames : namess ) {
 			System.out.println(eachNames);
 		}
 		System.out.println(".................................");
@@ -50,8 +51,18 @@ public class ForEachLoop {
 		}
 		System.out.println(".....................................");
 
+		String[] names = new String[4];
+		names[0] = "Sarwath";
+		names[1] = "Eva";
+		names[2] = "Mamun";
+		names[3] = "Tasnim";
+		
+	for (String eachNames : names) {
+		System.out.println(eachNames);
+	}
+		
 		//we can print all values from nums Arrays by using for-loop too.
-		for (int i = 0; i < nums.length; i++) {
+		for (int i = 0; i <nums.length ; i++) {
 			System.out.println(nums[i]);
 		}
 	}

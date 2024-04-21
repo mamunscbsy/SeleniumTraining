@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="takeSnapshots.TakeScreenshots">
+      <class name="com.testleaf.testcase.TestCaseExecution">
         <methods>
-          <include name="createLead"/>
+          <include name="verifyValidLogin"/>
         </methods>
-      </class> <!-- takeSnapshots.TakeScreenshots -->
+      </class> <!-- com.testleaf.testcase.TestCaseExecution -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

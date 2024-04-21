@@ -16,10 +16,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CreateLead {
 
-	//public static void main(String[] args) throws InterruptedException {
+	//public static void main(String[] args) {
 		
 	@Test
-	public void createLead() throws InterruptedException {
+	public void createLead() {
 		
 		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 		// WebDriverManager.firefoxdriver().setup();
@@ -66,7 +66,7 @@ public class CreateLead {
 		} catch (NoSuchElementException e) {
 			System.out.println("The element not found");
 		}
-		Thread.sleep(2000);
+	//	Thread.sleep(2000);
 		// throw new RuntimeException();
 
 		// enter lastName

@@ -4,15 +4,20 @@ public class If_elseIf_else {
 
 	public static void main(String[] args) {
 		
-		double D = 5.5; //D = Diabetic, 5.5 = Pre Diabetic, D < 5= Non Diabetic
+		//D = 5, Diabetic, 5.5 = Pre Diabetic, D < 5= Non Diabetic
+		
+		//Scenario-1
+		double D = 5.5; 
 
 		if(D <= 5) {
 			System.out.println("Diabetic");
 
-		}else if(D < 5){
+		}
+		else if(D < 5){
 			System.out.println("Non Diabetic");
 			
-		}else if(D > 8){
+		}
+		else if(D > 8){
 			System.out.println("Poor Control");
 		}
 
@@ -22,13 +27,16 @@ public class If_elseIf_else {
 		
 		System.out.println("*******************************************************");
 		
+		//Scenario - 2
 		int x = 20;
 		
 		if(x > 21) {
 			System.out.println("x less than 21");
-		}else if (x < 19) {
+		}
+		else if (x < 19) {
 			System.out.println("x is less than 18");
-		}else if(x > 25) {
+		}
+		else if(x > 25) {
 			System.out.println("x greatyer than 26");
 		}else {
 			System.out.println("x euqal to 20");

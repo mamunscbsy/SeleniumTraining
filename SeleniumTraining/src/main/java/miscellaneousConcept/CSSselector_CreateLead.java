@@ -2,6 +2,7 @@ package miscellaneousConcept;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -29,7 +30,8 @@ public class CSSselector_CreateLead {
 			// driver.findElement(By.id("username")).sendKeys("DemoSalesManager");
 
 			// Enter Password - (Element level)
-			driver.findElementById("password").sendKeys("crmsfa");
+			driver.findElement(By.cssSelector("#password")).sendKeys("crmsfa");
+			//driver.findElementById("password").sendKeys("crmsfa");
 
 			// Click Login Button - (Element level)
 			//driver.findElementByClassName("decorativeSubmit").click();
@@ -48,6 +50,7 @@ public class CSSselector_CreateLead {
 
 			// company name
 			//driver.findElementById("createLeadForm_companyName").sendKeys("TCS");
+			//driver.findElementByCssSelector("#createLeadForm_companyName").sendKeys("TCS");
 			driver.findElementByCssSelector("#createLeadForm_companyName").sendKeys("TCS");
 			
 			// enter firstName			
@@ -183,15 +186,16 @@ public class CSSselector_CreateLead {
 			// Verify the first name(for verifying first name, we use getText() and stored
 			// the value in firstName and print)
 
+			//String firstName = driver.findElementById("viewLead_firstName_sp").getText();
 			String firstName = driver.findElementById("viewLead_firstName_sp").getText();
 			System.out.println(firstName);
 
 			//System.out.println("Element not found");
-
+			
 			if (firstName.equals("Hema")) {
-				System.out.println("Name is Matched");
+				System.out.println("First name is Matched");
 			} else {
-				System.out.println("Not Match");
+				System.out.println("First name not Match");
 			}
 
 			driver.close();

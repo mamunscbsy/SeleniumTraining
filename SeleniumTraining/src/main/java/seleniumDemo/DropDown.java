@@ -14,7 +14,8 @@ public class DropDown {
 	public static void main(String[] args) throws InterruptedException {
 
 		// Launch Browser
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\mamun\\eclipse-workspace\\SeleniumTraining\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\mamun\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");		
+		//System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		ChromeDriver driver = new ChromeDriver();
 
 		//load URL
@@ -50,31 +51,37 @@ public class DropDown {
 		// enter firstName						
 		driver.findElementByCssSelector("input#createLeadForm_firstName").sendKeys("Hema");
 
-		// enter lastName
-		driver.findElementByCssSelector("#createLeadForm_lastName").sendKeys("Ma");
-		// driver.findElementById("createLeadForm_lastName").sendKeys("J");
+		// enter lastName		
+		driver.findElementById("createLeadForm_lastName").sendKeys("Jaya");
 
 		//select source-(DropDown)
 		
+		//How to handle drop-down
+		 //Choose a options [ex. Employee, Partner, Other etc.] from Source drop-down (element)
+		 //find the element by using a locator and store it in a variable
 		WebElement src = driver.findElementById("createLeadForm_dataSourceId");
+		 //WebElement source = driver.findElementById("createLeadForm_dataSourceId");
 		
-		Select dd = new Select(src);
+		//Create object of Select class and pass the variable 
+		Select dd = new Select (src);
+		//dd.selectByVisibleText("Employee");
+		//dd.selectByValue("LEAD_PARTNER");
+		dd.selectByIndex(7);
 		
-		dd.selectByVisibleText("Partner");
-		
+		// Choose Industry
+		WebElement Ind = driver.findElementById("createLeadForm_industryEnumId");
+		 Select dd1 = new Select (Ind);
+		 dd1.selectByVisibleText("Distribution");
+		 		
 		//Choose Marketing Campaign
 		
 		WebElement mktCam = driver.findElementById("createLeadForm_marketingCampaignId");
 		
-		Select dd1 = new Select(mktCam);
-		dd1.selectByVisibleText("Car and Driver");
+		Select dd2 = new Select(mktCam);
+		dd2.selectByVisibleText("Car and Driver");
 		//dd1.selectByValue("CATRQ_CAMPAIGNS");
-		
-		//Choose Industry
-		WebElement ind = driver.findElementById("createLeadForm_industryEnumId");
-		
-		Select dd2 = new Select (ind);
-		dd2.selectByIndex(2); 
+		Thread.sleep(2000);
+		dd2.deselectByVisibleText("Car and Driver");
 		
 		
 		

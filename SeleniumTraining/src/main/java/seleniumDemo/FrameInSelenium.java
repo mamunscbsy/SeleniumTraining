@@ -23,8 +23,9 @@ public class FrameInSelenium {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
 		//way-1 -Enter into the frame
-		//driver.switchTo().frame("iframeResult");
-		//driver.switchTo().frame("iframeResult");
+		
+		driver.switchTo().frame("iframeResult");
+		
 		
 		//way-2
 		//driver.switchTo().frame(0);
@@ -33,6 +34,9 @@ public class FrameInSelenium {
 		//driver.switchTo().frame(driver.findElementByXPath("//iframe[@id='iframeResult']"));
 		
 		//OR (we can do it other way)
+		//WebElement iframe = driver.findElementByXPath("//iframe[@id='iframeResult']");
+		//driver.switchTo().frame(iframe);
+		
 		/*WebElement iframe = driver.findElementByXPath("//iframe[@id='iframeResult']");
 		driver.switchTo().frame(iframe);*/
 		
@@ -47,13 +51,14 @@ public class FrameInSelenium {
 		
 		//remove/clear John from first name field
 		driver.findElementByXPath("//input[@value='John']").clear();
+		
 		//enter first name
-		driver.findElementByXPath("//input[@value='John']").sendKeys("Shahnaz");
+		driver.findElementByXPath("//input[@value='John']").sendKeys("Eva");
 				
 		Thread.sleep(3000);
 		driver.findElementByXPath("//input[@id='lname']").clear();
 		//enter last name
-		driver.findElementByXPath("//input[@id='lname']").sendKeys("Begum");
+		driver.findElementByXPath("//input[@id='lname']").sendKeys("Khan");
 		//click submit
 		driver.findElementByXPath("//input[@value='Submit']").click();
 		

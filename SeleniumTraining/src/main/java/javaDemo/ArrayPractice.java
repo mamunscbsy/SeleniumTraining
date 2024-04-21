@@ -37,7 +37,7 @@ public class ArrayPractice {
 
 		//1. How to store the values into Arrays(Note: Two ways available)
 
-		// first way
+		// way-1
 		//String [] names = {"Touhid", "Ashraf", "WXYZ", "Doha"}; 	
 		
 		String [] names = {"Shakil", "Helal", "Morium","Jaki","Nilufar"};
@@ -60,7 +60,7 @@ public class ArrayPractice {
 		System.out.println(id[2]);
 		System.out.println(names.length);
 
-		// Second way		
+		// way-2
 		//ClassName obj = new ClassName();
 
 		String[] obj = new String[4];

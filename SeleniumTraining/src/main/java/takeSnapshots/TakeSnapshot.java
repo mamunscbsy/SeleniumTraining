@@ -39,7 +39,10 @@ public class TakeSnapshot {
 		// click create lead link
 		driver.findElement(By.linkText("Create Lead")).click();
 
+		//Enter Company name
 		driver.findElement(By.id("createLeadForm_companyName")).sendKeys("ABC");
+		driver.findElement(By.id("createLeadForm_firstName")).sendKeys("Hema");
+		driver.findElementByXPath("//input[@id='createLeadForm_lastName3']").sendKeys("Ma");
 
 		try {
 			driver.findElement(By.id("createLeadForm_firstName")).sendKeys("Hema");
@@ -59,17 +62,18 @@ public class TakeSnapshot {
 		}finally {
 		
 			//Take snapshot/ScreenShot
+		//File src = driver.getScreenshotAs(OutputType.FILE);
+		File src= driver.getScreenshotAs(OutputType.FILE);
 				
-			File src = driver.getScreenshotAs(OutputType.FILE); // take snapshot and store in Temp File
+		//	File src = driver.getScreenshotAs(OutputType.FILE); // take snapshot and store in Temp File
 			
 			//Path/location-1, where it will store after moved
-			File dest = new File("C:\\Users\\mamun\\Desktop\\snaps\\img.png"); //define the destination file
-				
-		//Path/location-2, where it will store after moved
-		//File dest = new File("./snap/image.png");
+		//	File dest = new File("C:\\Users\\mamun\\Desktop\\snaps\\img.png"); //define the destination file
 			
-		//File dest = new File("./snap/image.png");
-		
+		//Path/location-2, where it will store after moved
+		File dest = new File("./snap/img.png");
+			
+			
 			FileUtils.copyFile(src, dest);
 		//FileUtils.copyFile(src, dest); //moved file source to destination(img or image file)
 			

@@ -4,7 +4,7 @@ public class CallEncap {
 	public static void main(String[] args) {
 		
 		LearnEncapsulation obj = new LearnEncapsulation();
-		System.out.println(obj.atm);
+		//System.out.println(obj.atm);
 		
 		obj.getdata();
 		

@@ -16,14 +16,14 @@ public class DataType {
 				int z;	
 				int x = 100; 
 				
-				short num0 = 1;
-				int rumman = 10;
-				long Rumman = 11111111111111111l;
+				short num = 1;
+				int A = 10;
+				long B = 11111111111111111l;
 				char letter = 'A';
 				
 				float number = 9.55f;
-				double num3 = 10.10;
-				boolean objnum = true;
+				double num1 = 10.10;
+				boolean mamun = true;
 			
 				//NonPrimitive Datatype (String, Arrays, Classes and Interfaces)
 				
@@ -33,13 +33,13 @@ public class DataType {
 				
 				//any thing print/display in console in Java
 				
-				System.out.println(num0);
-				System.out.println(rumman);
-				System.out.println(Rumman);
+				System.out.println(num);
+				System.out.println(A);
+				System.out.println(B);
 				System.out.println(letter);
 				System.out.println(number);
-				System.out.println(num3);
-				System.out.println(objnum);
+				System.out.println(num1);
+				System.out.println(mamun);
 				System.out.println(line);
 			}
 			

@@ -29,6 +29,9 @@ public class LaunchChromeBrowser1 {
 		driver.manage().window().maximize();
 		Thread.sleep(4000);
 		//Close browser
-		driver.close();		
+		driver.close();	
+		
 	}
+	
+	
 }

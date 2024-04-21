@@ -11,6 +11,7 @@ public class DataType1 {
 		float f = 20.10f;
 		char b = 'a';
 		boolean text = true;
+		String name12 = "mamun";
 		String name = "Jony";
 		String line = "I am learning Java with Selenium";
 		String z = "12345";

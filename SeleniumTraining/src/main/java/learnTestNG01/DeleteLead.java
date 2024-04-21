@@ -7,8 +7,7 @@ import org.testng.annotations.Test;
 
 public class DeleteLead {
 	
-	@Test
-	
+	@Test	
 	public void deleteLead() throws InterruptedException {
 		
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");

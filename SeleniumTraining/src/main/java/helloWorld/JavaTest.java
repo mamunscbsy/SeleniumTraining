@@ -7,6 +7,7 @@ public class JavaTest {
 		System.out.println("Java testing");
 		System.out.println("Selenium testing");
 		System.out.println("TestNG testing");
+		System.out.println("I am learning Java");
 	}
 
 }
