@@ -40,7 +40,7 @@ System.out.println("*****************************************************");
 		//for (int i = 0; i<6;i=i+1) {
 		//}
 		for(int i=0;i<obj.length; i=i+1) {
-			System.out.println();
+			System.out.println(i);
 			//System.out.println(i);	//For printing all index number
 
 			//System.out.println(i +" United State of America"); //printing "United State of America"multiple times with index number 
